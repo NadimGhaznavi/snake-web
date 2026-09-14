@@ -55,7 +55,9 @@ class PublishingTests(unittest.TestCase):
         self.assertIn('published', self.activity.run())
         self.assertEqual(self.remote_page(), render_status(PAGE, 51).strip())
         head = self.git(self.remote, 'rev-parse', 'main')
-        self.assertIn('unchanged', self.activity.run())
+        with patch.object(self.publisher, '_git', wraps=self.publisher._git) as git:
+            self.assertIn('unchanged', self.activity.run())
+            self.assertFalse(any(call.args[0] == 'push' for call in git.call_args_list))
         self.assertEqual(head, self.git(self.remote, 'rev-parse', 'main'))
         self.assertEqual(self.git(self.repo, 'diff-tree', '--no-commit-id', '--name-only', '-r', 'HEAD'), GitPublisher.STATUS_PATH)
 
@@ -187,12 +189,14 @@ class ServiceTests(unittest.TestCase):
         stopped.is_set.return_value = False
         stopped.wait.side_effect = [False, True]
         with patch.object(sys, 'argv', ['snake-web']), \
+             patch.object(server.DSnakeWeb, 'POLL_INTERVAL', 37), \
              patch.object(server.signal, 'signal'), \
              patch.object(server.threading, 'Event', return_value=stopped), \
              patch.object(server, 'publish_once', side_effect=[RuntimeError('unavailable'), 'published']) as publish, \
              self.assertLogs(level='INFO'):
             self.assertEqual(server.main(), 0)
             self.assertEqual(publish.call_count, 2)
+            self.assertEqual([call.args for call in stopped.wait.call_args_list], [(37,), (37,)])
 
     def test_shutdown_signal_stops_loop(self):
         handlers = {}

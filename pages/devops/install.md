@@ -9,7 +9,9 @@ layout: single
 Snake Web reads the highest recorded score across all Snake Lab simulation
 runs, updates `pages/status/index.md` in a dedicated publishing clone, and
 commits and pushes the page when its content changes. It runs immediately on
-startup and every 300 seconds by default. It opens no listening ports.
+startup and then waits `DSnakeWeb.POLL_INTERVAL` seconds between checks
+(currently 300 seconds). It pushes when the score changes or a previous status
+commit still needs to be pushed. It opens no listening ports.
 
 The host needs Python 3.10 or newer with `venv` support, Git, and systemd.
 On Debian, install `python3-venv` and `git` first. The installer creates a
@@ -48,7 +50,6 @@ DB_USER=snake_web_reader
 DB_PASSWORD="replace-with-production-password"
 PUBLISH_CHECKOUT=/var/lib/snake-web/site
 PUBLISH_BRANCH=main
-PUBLISH_INTERVAL_SECONDS=300
 GIT_SSH_COMMAND="ssh -i /var/lib/snake-web/.ssh/id_ed25519 -o IdentitiesOnly=yes -o BatchMode=yes -o StrictHostKeyChecking=yes -o UserKnownHostsFile=/var/lib/snake-web/.ssh/known_hosts"
 ```
 
