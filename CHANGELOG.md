@@ -9,6 +9,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.2.0] - 2026-09-14 @ 05:32
+
+### Added
+
+- Added the AppDb → DbMgr DAL for reading the highest recorded Snake Lab simulation score without modifying source databases.
+- Added one-shot and periodic status publishing through a dedicated Git clone, with status-only commits, serialized updates, and retries for pending pushes.
+- Added DEV tests using temporary Git repositories and optional restored MariaDB data.
+- Documented coding conventions and split the DevOps guide into dedicated pages.
+
+### Changed
+
+- The daemon now uses `DSnakeWeb.POLL_INTERVAL` between high-score checks, pushing only changed status or a pending status commit from a failed push.
+- Installation now deploys the DAL and publisher with a Python virtual environment and reads production configuration from `/etc/snake-web.env`, preserving it during upgrades.
+
 ## [0.1.0] - 2026-09-13 @ 22:30
 
 ### Added

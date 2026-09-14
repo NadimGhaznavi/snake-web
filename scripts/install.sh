@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Install and start the idle Python service.
+# Install and start the status publishing service.
 set -euo pipefail
 
 service_user=snake-web
@@ -21,7 +21,7 @@ Create the snake-web system account with home /var/lib/snake-web and
 install Python daemon code in /opt/prod/snake-web, owned by root, and
 enable and start snake-web.service (restart it on reinstall).
 Safe to rerun with an existing compatible account and directories.
-Does not configure GitHub credentials. Requires Python 3 and systemd.
+Does not configure GitHub credentials. Requires Python 3 with venv support, Git, systemd, and package download access.
 EOF
 }
 
@@ -32,24 +32,36 @@ fi
 [[ $# == 0 ]] || { usage >&2; exit 2; }
 [[ ${EUID} == 0 ]] || fail 'Run this installer as root.'
 
-for command in getent groupadd useradd install id systemctl; do
+for command in getent groupadd useradd install id systemctl git; do
     command -v "${command}" >/dev/null || fail "Required command not found: ${command}"
 done
 [[ -x /usr/sbin/nologin ]] || fail 'Missing /usr/sbin/nologin.'
 [[ -x /usr/bin/python3 ]] || fail 'Missing /usr/bin/python3.'
 [[ -d /run/systemd/system ]] || fail 'This installer requires a running systemd system.'
-for source_file in snake_web/__init__.py snake_web/server.py snake_web/constants/DSnakeWeb.py systemd/snake-web.service; do
+code_files=(
+    snake_web/__init__.py
+    snake_web/server.py
+    snake_web/constants/DSnakeWeb.py
+    snake_web/activity/AppDb.py
+    snake_web/activity/PublishStatus.py
+    snake_web/interface/DbMgr.py
+    snake_web/interface/GitPublisher.py
+)
+for source_file in "${code_files[@]}" requirements.txt systemd/snake-web.service; do
     [[ -f ${source_dir}/${source_file} ]] || fail "Missing source file: ${source_file}"
 done
 
-for directory in /var/lib "${service_home}" /opt /opt/prod "${install_dir}" "${install_dir}/snake_web" "${install_dir}/snake_web/constants"; do
+for directory in /var/lib "${service_home}" /opt /opt/prod "${install_dir}" "${install_dir}/snake_web" "${install_dir}/snake_web/constants" "${install_dir}/snake_web/activity" "${install_dir}/snake_web/interface" "${install_dir}/venv"; do
     [[ ! -L ${directory} ]] || fail "Refusing symlink: ${directory}"
     [[ ! -e ${directory} || -d ${directory} ]] || fail "Not a directory: ${directory}"
 done
-for destination in "${unit_path}" "${install_dir}/snake_web/__init__.py" "${install_dir}/snake_web/server.py" "${install_dir}/snake_web/constants/DSnakeWeb.py"; do
+for relative in "${code_files[@]}" requirements.txt; do
+    destination="${install_dir}/${relative}"
     [[ ! -L ${destination} ]] || fail "Refusing symlink: ${destination}"
     [[ ! -e ${destination} || -f ${destination} ]] || fail "Not a regular file: ${destination}"
 done
+[[ ! -L ${unit_path} ]] || fail "Refusing symlink: ${unit_path}"
+[[ ! -e ${unit_path} || -f ${unit_path} ]] || fail "Not a regular file: ${unit_path}"
 
 if account=$(getent passwd "${service_user}"); then
     IFS=: read -r name password uid gid comment account_home account_shell <<< "${account}"
@@ -70,9 +82,11 @@ if [[ ! -d /opt/prod ]]; then
     install -d -m 0755 -o root -g root /opt/prod
 fi
 install -d -m 0755 -o root -g root "${install_dir}"
-install -d -m 0755 -o root -g root "${install_dir}/snake_web" "${install_dir}/snake_web/constants"
-install -m 0644 -o root -g root "${source_dir}/snake_web/__init__.py" "${source_dir}/snake_web/server.py" "${install_dir}/snake_web/"
-install -m 0644 -o root -g root "${source_dir}/snake_web/constants/DSnakeWeb.py" "${install_dir}/snake_web/constants/"
+for relative in "${code_files[@]}" requirements.txt; do
+    install -D -m 0644 -o root -g root "${source_dir}/${relative}" "${install_dir}/${relative}"
+done
+/usr/bin/python3 -m venv "${install_dir}/venv"
+"${install_dir}/venv/bin/python" -m pip install -r "${install_dir}/requirements.txt"
 install -m 0644 -o root -g root "${source_dir}/systemd/snake-web.service" "${unit_path}"
 systemctl daemon-reload
 systemctl enable snake-web.service
