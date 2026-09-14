@@ -9,6 +9,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.2.0] - 2026-09-14 @ 05:32
+
 ### Added
 
 - Added the AppDb → DbMgr DAL for reading the highest recorded Snake Lab simulation score without modifying source databases.
