@@ -9,6 +9,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.2.2] - 2026-09-14 @ 06:20
+
 ### Added
 
 - Install and upgrade now provision Snake Web's own `snake_web_reader@localhost` account with only SELECT access to `snakelab.simulation_runs`, using local MariaDB root socket access.
