@@ -9,6 +9,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.2.2] - 2026-09-14 @ 06:20
+
+### Added
+
+- Install and upgrade now provision Snake Web's own `snake_web_reader@localhost` account with only SELECT access to `snakelab.simulation_runs`, using local MariaDB root socket access.
+- Store generated credentials in root-owned `/etc/snake-lab/database.env` (0600), preserving the password across upgrades and leaving unrelated application credentials untouched.
+- Added isolated MariaDB tests for credential preservation, restricted grants, account recovery, and refusal to take over unrelated files or accounts.
+
+### Changed
+
+- The systemd service loads its managed database environment separately from Git settings in `/etc/snake-web.env`.
+
 ## [0.2.0] - 2026-09-14 @ 05:32
 
 ### Added
