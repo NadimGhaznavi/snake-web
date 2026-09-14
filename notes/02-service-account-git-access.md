@@ -10,8 +10,9 @@ accidentally commit development work or change a developer's active branch.
 The examples below assume an account and group named `snake-web`, a home at
 `/var/lib/snake-web`, and a production clone at `/var/lib/snake-web/site`.
 The daemon code lives separately in `/opt/prod/snake-web`, owned by `root:root`
-with mode `0755`, so the service account can read and execute it. This repository
-does not yet define a service executable.
+with mode `0755`, so the service account can read and execute it. The current
+`snake_web.server` service only waits for shutdown; publishing is not yet
+implemented.
 
 ## Root-run installation
 
@@ -24,8 +25,14 @@ sudo scripts/install.sh
 It creates the `snake-web` system account with a `nologin` shell, prepares its
 home with mode `0750`, and creates the root-owned daemon code directory. On
 reinstall, it checks the existing account's home, shell, and primary group and
-preserves directory contents. It does not copy daemon code, install a systemd
-unit, or configure GitHub credentials.
+preserves account data. It copies daemon code and installs, enables, and starts
+`snake-web.service`, restarting it on reinstall. Python 3 and a running systemd
+system are required. It does not configure GitHub credentials.
+
+For later releases, pull the desired release into the root-managed deployment
+checkout and run `scripts/upgrade.sh` as root. The upgrade script uses this same
+installation path to update code and the unit and restart the service, while
+preserving the service account's home, credentials, and publishing clone.
 
 Run Git and key
 generation as `snake-web`, even though installation runs as root, so the account
@@ -40,11 +47,10 @@ Run from the project root:
 sudo scripts/uninstall.sh
 ```
 
-This removes `/opt/prod/snake-web` and its contents. It preserves the `snake-web`
+This stops and disables the service, removes its systemd unit, and removes
+`/opt/prod/snake-web` and its contents. It preserves the `snake-web`
 account and group, its home at `/var/lib/snake-web`, SSH credentials, the
 publishing clone, and the development checkout. It can be rerun after removal.
-The current installer does not install a systemd unit; service lifecycle
-management will need to be added when the daemon is installed.
 
 ## SSH credentials
 
@@ -83,13 +89,17 @@ workflow.
 
 ## systemd settings
 
-Include these settings in the publisher's service, alongside its `ExecStart`:
+When publishing is implemented, add the Git environment settings below to the
+service. Keep its working directory at `/opt/prod/snake-web` so Python can find
+the installed module, and use `git -C /var/lib/snake-web/site` for Git commands.
+The installed unit already sets the account, home, and filesystem protections;
+`StateDirectory=snake-web` makes `/var/lib/snake-web` writable by the service.
 
 ```ini
 [Service]
 User=snake-web
 Group=snake-web
-WorkingDirectory=/var/lib/snake-web/site
+WorkingDirectory=/opt/prod/snake-web
 Environment=HOME=/var/lib/snake-web
 Environment=GIT_TERMINAL_PROMPT=0
 Environment="GIT_SSH_COMMAND=ssh -i /var/lib/snake-web/.ssh/id_ed25519 -o IdentitiesOnly=yes -o BatchMode=yes -o StrictHostKeyChecking=yes -o UserKnownHostsFile=/var/lib/snake-web/.ssh/known_hosts"

@@ -9,6 +9,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- Added `scripts/upgrade.sh` for root-run deployment of a pulled release, reusing the installer to update code and systemd while preserving service account data.
+- Added an idle Python service with clean SIGTERM/SIGINT shutdown and journal logging.
+- Adapted the Ax3l systemd template to run as `snake-web` with filesystem protections and automatic restart on failure.
+
+### Changed
+
+- Installation now deploys daemon code and enables and starts the systemd service; reinstallation restarts it.
+- Uninstallation now stops and removes the service while preserving the account and its data.
+
 ## [0.0.1] - 2026-09-13 @ 21:52
 
 ### Added
