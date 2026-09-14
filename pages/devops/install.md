@@ -14,7 +14,9 @@ startup and then waits `DSnakeWeb.POLL_INTERVAL` seconds between checks
 commit still needs to be pushed. It opens no listening ports.
 
 The host needs Python 3.10 or newer with `venv` support, Git, and systemd.
-On Debian, install `python3-venv` and `git` first. The installer creates a
+On Debian, install `python3-venv`, `git`, and `mariadb-client` first. MariaDB
+must already be running locally with the Snake Lab schema installed, and root
+must be able to administer it through its Unix socket without a password. The installer creates a
 virtual environment under `/opt/prod/snake-web/venv` and installs the PyMySQL
 dependency from `requirements.txt`; this requires package download access.
 
@@ -30,32 +32,46 @@ It creates the `snake-web` system account with a `nologin` shell, prepares its
 home with mode `0750`, and creates the root-owned daemon code directory. On
 reinstall, it checks the existing account's home, shell, and primary group and
 preserves account data. It copies daemon code and installs, enables, and starts
-`snake-web.service`, restarting it on reinstall. It does not configure database
-or GitHub credentials.
+`snake-web.service`, restarting it on reinstall. It provisions the dedicated
+Snake Web database reader; GitHub credential setup remains separate.
 
 The service starts at boot.
 
 ## Production configuration
 
-Create `/etc/snake-web.env` as root, with ownership `root:root` and mode `0600`.
-The service reads this file through systemd. Installation and upgrades preserve
-it. Use a database account with SELECT access to `snakelab.simulation_runs`.
-The DAL also opens a read-only transaction and never initializes source tables.
+Install and upgrade automatically create Snake Web's own MariaDB account,
+`snake_web_reader@localhost`, with a generated password and only `SELECT` on
+`snakelab.simulation_runs`. They discover the local MariaDB socket using the
+`mariadb` client and perform provisioning with local root access. They never
+reuse or modify the Snake Lab or Ax3l application accounts and never create or
+migrate the source database schema.
+
+Credentials are stored at **`/etc/snake-lab/database.env`**, owned by `root:root`
+with mode `0600`. This is Snake Web's credential file despite the directory
+name. The file contains `DB_HOST`, `DB_SOCKET`, `DB_NAME`, `DB_USER`, and
+`DB_PASSWORD`; systemd loads it for the service, so the service account does not
+need direct read access. The DAL also uses a read-only transaction.
+
+Upgrades preserve the generated password and reapply the dedicated account's
+SELECT-only privileges. A missing account can be recreated from its saved
+credentials. If the environment file belongs to another application, or the
+reader account exists without a Snake Web-managed credential file, provisioning
+stops without taking it over. Keep this file when moving or restoring the
+service. A socket-path mismatch also stops provisioning for inspection.
+
+Git settings remain in `/etc/snake-web.env`. Create that file as root with
+ownership `root:root` and mode `0600`:
 
 ```ini
-DB_HOST=127.0.0.1
-DB_PORT=3306
-DB_NAME=snakelab
-DB_USER=snake_web_reader
-DB_PASSWORD="replace-with-production-password"
 PUBLISH_CHECKOUT=/var/lib/snake-web/site
 PUBLISH_BRANCH=main
 GIT_SSH_COMMAND="ssh -i /var/lib/snake-web/.ssh/id_ed25519 -o IdentitiesOnly=yes -o BatchMode=yes -o StrictHostKeyChecking=yes -o UserKnownHostsFile=/var/lib/snake-web/.ssh/known_hosts"
 ```
 
-For a Unix socket connection, additionally set `DB_SOCKET` to the MariaDB socket
-path visible to the service. Use the actual production host/socket and database
-credentials. This slice reads Snake Lab directly; it does not need the Ax3l DB.
+Remove any old `DB_*` entries from `/etc/snake-web.env`; the managed database
+file is loaded afterward and supplies the database configuration. Both files
+are preserved during upgrades and uninstallation. Uninstallation also preserves
+the reader account and grants.
 
 Set up the dedicated clone and SSH credentials as described in
 [Git Access]({% link pages/devops/git-access.md %}). The configured branch must
@@ -92,6 +108,14 @@ remote. The September 14, 2026 Snake Lab backup contains 110 runs and a high
 score of 49. Adjust the expected score when testing another backup.
 
 For a configured foreground run, use `.venv/bin/python -m snake_web.server --once`.
-It uses the environment variables above, performs an actual status commit and
+It requires the `DB_*` values from the managed database file and the Git
+settings in its environment, performs an actual status commit and
 push, and exits nonzero on failure. Omitting `--once` runs the periodic service.
 A missing score preserves the existing page; zero is a valid score.
+
+To test provisioning itself, add
+`SNAKE_WEB_PROVISION_TEST_SOCKET=/tmp/snake-web-slice-db.sock` to the test command.
+Use only the isolated test instance: these tests create and remove the
+`snake_web_reader` account there and verify that its access is restricted. They
+write credential files only in temporary directories. They refuse to start if
+that instance already contains a `snake_web_reader` account.

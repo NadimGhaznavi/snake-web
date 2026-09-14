@@ -21,6 +21,8 @@ Create the snake-web system account with home /var/lib/snake-web and
 install Python daemon code in /opt/prod/snake-web, owned by root, and
 enable and start snake-web.service (restart it on reinstall).
 Safe to rerun with an existing compatible account and directories.
+Provisions a dedicated local MariaDB reader and /etc/snake-lab/database.env.
+Requires local MariaDB root socket access and the existing Snake Lab schema.
 Does not configure GitHub credentials. Requires Python 3 with venv support, Git, systemd, and package download access.
 EOF
 }
@@ -32,7 +34,7 @@ fi
 [[ $# == 0 ]] || { usage >&2; exit 2; }
 [[ ${EUID} == 0 ]] || fail 'Run this installer as root.'
 
-for command in getent groupadd useradd install id systemctl git; do
+for command in getent groupadd useradd install id systemctl git mariadb; do
     command -v "${command}" >/dev/null || fail "Required command not found: ${command}"
 done
 [[ -x /usr/sbin/nologin ]] || fail 'Missing /usr/sbin/nologin.'
@@ -47,7 +49,7 @@ code_files=(
     snake_web/interface/DbMgr.py
     snake_web/interface/GitPublisher.py
 )
-for source_file in "${code_files[@]}" requirements.txt systemd/snake-web.service; do
+for source_file in "${code_files[@]}" requirements.txt scripts/provision-database.py systemd/snake-web.service; do
     [[ -f ${source_dir}/${source_file} ]] || fail "Missing source file: ${source_file}"
 done
 
@@ -87,6 +89,7 @@ for relative in "${code_files[@]}" requirements.txt; do
 done
 /usr/bin/python3 -m venv "${install_dir}/venv"
 "${install_dir}/venv/bin/python" -m pip install -r "${install_dir}/requirements.txt"
+"${install_dir}/venv/bin/python" "${source_dir}/scripts/provision-database.py"
 install -m 0644 -o root -g root "${source_dir}/systemd/snake-web.service" "${unit_path}"
 systemctl daemon-reload
 systemctl enable snake-web.service

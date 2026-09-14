@@ -23,8 +23,9 @@ or select a release itself; to deploy a specific version, check out its `vX.Y.Z`
 tag before running the script. Keep this deployment checkout separate from
 both `/opt/prod/snake-web` (installed code) and `/var/lib/snake-web/site`
 (the publishing clone). This workflow also works on the development host.
-Upgrades preserve `/etc/snake-web.env`, the service account's home, credentials,
+Upgrades preserve `/etc/snake-web.env`, `/etc/snake-lab/database.env`, the service account's home, credentials,
 and publishing clone. They also install the release's Python dependencies into
-the deployed virtual environment. Configure the database and publisher as
+the deployed virtual environment and provision or repair the dedicated database
+reader using its saved password. Local MariaDB root socket access is required. Configure the database and publisher as
 described in [Install Snake Web]({% link pages/devops/install.md %}) before the
 first publishing run.
