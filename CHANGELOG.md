@@ -18,6 +18,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+- The daemon now uses `DSnakeWeb.POLL_INTERVAL` between high-score checks, pushing only changed status or a pending status commit from a failed push.
 - Installation now deploys the DAL and publisher with a Python virtual environment and reads production configuration from `/etc/snake-web.env`, preserving it during upgrades.
 
 ## [0.1.0] - 2026-09-13 @ 22:30
