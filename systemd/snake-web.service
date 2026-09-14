@@ -1,0 +1,25 @@
+[Unit]
+Description=Snake Web server
+After=network.target
+
+[Service]
+Type=simple
+User=snake-web
+Group=snake-web
+WorkingDirectory=/opt/prod/snake-web
+Environment=HOME=/var/lib/snake-web
+Environment=PYTHONUNBUFFERED=1
+Environment=PYTHONDONTWRITEBYTECODE=1
+ExecStart=/usr/bin/python3 -m snake_web.server
+StateDirectory=snake-web
+StateDirectoryMode=0750
+RuntimeDirectory=snake-web
+Restart=on-failure
+RestartSec=5
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectHome=true
+ProtectSystem=strict
+
+[Install]
+WantedBy=multi-user.target
