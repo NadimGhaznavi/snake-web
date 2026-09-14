@@ -12,6 +12,7 @@ reload systemd, and enable and restart snake-web.service.
 
 Also supports the first deployment. Preserves /var/lib/snake-web,
 including SSH credentials and the publishing clone.
+Preserves /etc/snake-lab/database.env and reapplies the dedicated reader privileges.
 Uses the files in this checkout; does not fetch or switch Git releases.
 EOF
 }
