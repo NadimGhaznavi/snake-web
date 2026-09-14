@@ -9,6 +9,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.0] - 2026-09-13 @ 22:30
+
 ### Added
 
 - Added `scripts/upgrade.sh` for root-run deployment of a pulled release, reusing the installer to update code and systemd while preserving service account data.
