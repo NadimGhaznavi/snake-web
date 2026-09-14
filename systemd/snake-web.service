@@ -1,6 +1,7 @@
 [Unit]
 Description=Snake Web server
-After=network.target
+After=network-online.target
+Wants=network-online.target
 
 [Service]
 Type=simple
@@ -10,7 +11,9 @@ WorkingDirectory=/opt/prod/snake-web
 Environment=HOME=/var/lib/snake-web
 Environment=PYTHONUNBUFFERED=1
 Environment=PYTHONDONTWRITEBYTECODE=1
-ExecStart=/usr/bin/python3 -m snake_web.server
+EnvironmentFile=-/etc/snake-web.env
+Environment=GIT_TERMINAL_PROMPT=0
+ExecStart=/opt/prod/snake-web/venv/bin/python -m snake_web.server
 StateDirectory=snake-web
 StateDirectoryMode=0750
 RuntimeDirectory=snake-web
