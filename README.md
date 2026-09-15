@@ -2,5 +2,5 @@
 
 Website showing Ax3l experiment status.
 
-Application code, deployment scripts, and tests live in
+Application code, deployment scripts, DevOps documentation, and tests live in
 [snake-web-code](https://github.com/NadimGhaznavi/snake-web-code).
