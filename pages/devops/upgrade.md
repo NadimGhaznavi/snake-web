@@ -6,8 +6,8 @@ layout: single
 
 # Upgrade Snake Web
 
-Cut a release in the development checkout, then switch to root and pull the
-release into a separate deployment checkout on the host. From that checkout
+Cut a release in the `snake-web-code` development checkout, then switch to root and pull the
+release into a separate `snake-web-code` deployment checkout on the host. From that checkout
 on `main`, run:
 
 ```sh
