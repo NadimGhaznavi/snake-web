@@ -20,7 +20,9 @@ must be able to administer it through its Unix socket without a password. The in
 virtual environment under `/opt/prod/snake-web/venv` and installs the PyMySQL
 dependency from `requirements.txt`; this requires package download access.
 
-Run the installer from the project root:
+Application code, scripts, and tests live in the
+[snake-web-code repository](https://github.com/NadimGhaznavi/snake-web-code).
+Run the installer from the root of that checkout:
 
 ```sh
 sudo scripts/install.sh
@@ -84,6 +86,7 @@ failures are logged and retried on the next interval.
 
 Production is a separate host running the live Ax3l and Snake Lab systems.
 Use restored backups and temporary Git repositories for DEV validation.
+Run the following commands from the `snake-web-code` checkout.
 
 ```sh
 python3 -m venv .venv
