@@ -35,7 +35,7 @@ classes: wide
         <li>Hostname: wintermute</li>
         <li>All-Time Highscore: 49</li>
         <li>Current Highscore: 45</li>
-        <li>Simulations Submitted: 221</li>
+        <li>Simulations Submitted: 223</li>
         <li>Experiment Cycles: 31</li>
       </ul>
     </section>
@@ -45,6 +45,7 @@ classes: wide
         <li><a href="reports/score-distribution.html">Score Distribution Histogram</a></li>
         <li><a href="reports/experiment-highscores.html">Experiment Highscores</a></li>
         <li><a href="reports/golden-configurations.html">Golden Configurations</a></li>
+        <li><a href="reports/event-log.html">Event Log</a></li>
       </ul>
     </section>
     <figure class="experiment-board" aria-labelledby="highscore-snapshot-caption">
@@ -54,4 +55,4 @@ classes: wide
   </div>
 </section>
 
-<p>Last Updated: <!-- last-updated -->2026-09-16 05:47:51 EDT (-0400)<!-- /last-updated --></p>
+<p>Last Updated: <!-- last-updated -->2026-09-16 05:57:34 EDT (-0400)<!-- /last-updated --></p>
