@@ -6,4 +6,4 @@ layout: single
 
 # Experiment Status
 
-- Current highscore: 46
+- Current highscore: 47
