@@ -4,3 +4,6 @@ author_profile: true
 layout: single
 ---
 
+# Experiment Status
+
+- Current highscore: 49
