@@ -35,7 +35,7 @@ classes: wide
         <li>Hostname: wintermute</li>
         <li>All-Time Highscore: 49</li>
         <li>Current Highscore: 39</li>
-        <li>Simulations Submitted: 215</li>
+        <li>Simulations Submitted: 216</li>
         <li>Experiment Cycles: 30</li>
       </ul>
     </section>
@@ -53,3 +53,8 @@ classes: wide
     </figure>
   </div>
 </section>
+
+<div id="goatcounter-visits"></div>
+<script data-goatcounter="https://nadim.goatcounter.com/count"
+        async src="https://gc.zgo.at/count.js"
+        onload="window.goatcounter.visit_count({append: '#goatcounter-visits'})"></script>
