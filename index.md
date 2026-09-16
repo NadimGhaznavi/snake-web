@@ -35,14 +35,14 @@ classes: wide
         <li>Hostname: wintermute</li>
         <li>All-Time Highscore: 49</li>
         <li>Current Highscore: 39</li>
-        <li>Simulations Submitted: 214</li>
+        <li>Simulations Submitted: 215</li>
         <li>Experiment Cycles: 30</li>
       </ul>
     </section>
     <section class="experiment-reports" aria-labelledby="experiment-reports-title">
       <h3 id="experiment-reports-title">Reports</h3>
       <ul class="report-names">
-        <li>Score Distribution Histogram</li>
+        <li><a href="reports/score-distribution.html">Score Distribution Histogram</a></li>
         <li><a href="reports/experiment-highscores.html">Experiment Highscores</a></li>
         <li>Golden Configurations</li>
       </ul>
