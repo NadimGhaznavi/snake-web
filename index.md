@@ -35,8 +35,8 @@ classes: wide
         <li>Hostname: wintermute</li>
         <li>All-Time Highscore: 49</li>
         <li>Current Highscore: 39</li>
-        <li>Simulations Submitted: 205</li>
-        <li>Experiment Cycles: 28</li>
+        <li>Simulations Submitted: 206</li>
+        <li>Experiment Cycles: 29</li>
       </ul>
     </section>
     <section class="experiment-reports" aria-labelledby="experiment-reports-title">
