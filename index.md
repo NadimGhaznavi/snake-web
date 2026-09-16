@@ -35,7 +35,7 @@ classes: wide
         <li>Hostname: wintermute</li>
         <li>All-Time Highscore: 49</li>
         <li>Current Highscore: 39</li>
-        <li>Simulations Submitted: 216</li>
+        <li>Simulations Submitted: 217</li>
         <li>Experiment Cycles: 30</li>
       </ul>
     </section>
