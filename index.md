@@ -37,10 +37,11 @@ classes: wide
       <li><a href="reports/top-100.html">Top 100</a></li>
       <li><a href="reports/score-distribution.html">Score Distribution</a></li>
       <li><a href="reports/experiment-highscores.html">Experiment Highscores</a></li>
+      <li><a href="reports/ax3l-thinking.html">Ax3l's Thinking</a></li>
       <li><a href="reports/golden-configurations.html">Golden Configurations</a></li>
       <li><a href="reports/event-log.html">Event Log</a></li>
     </ul>
   </section>
   <p class="experiment-footer">Running on: neuromancer<br>
-  Last Updated: <!-- last-updated -->2026-09-16 20:37:02 EDT (-0400)<!-- /last-updated --></p>
+  Last Updated: <!-- last-updated -->2026-09-16 20:46:38 EDT (-0400)<!-- /last-updated --></p>
 </section>
