@@ -27,20 +27,20 @@ classes: wide
       <ul class="experiment-metrics">
         <li>All-Time Highscore: 51</li>
         <li>Current Highscore: 50</li>
-        <li>Completed Experiments: 30</li>
-        <li>Simulations Run: 219</li>
+        <li>Completed Experiments: 31</li>
+        <li>Simulations Run: 220</li>
       </ul>
     </figcaption>
   </figure>
   <section class="experiment-reports" aria-label="Reports">
     <ul class="report-names">
       <li><a href="reports/top-100.html">Top 100</a></li>
-      <li><a href="reports/score-distribution.html">Score Distribution Histogram</a></li>
+      <li><a href="reports/score-distribution.html">Score Distribution</a></li>
       <li><a href="reports/experiment-highscores.html">Experiment Highscores</a></li>
       <li><a href="reports/golden-configurations.html">Golden Configurations</a></li>
       <li><a href="reports/event-log.html">Event Log</a></li>
     </ul>
   </section>
   <p class="experiment-footer">Running on: neuromancer<br>
-  Last Updated: <!-- last-updated -->2026-09-16 20:30:01 EDT (-0400)<!-- /last-updated --></p>
+  Last Updated: <!-- last-updated -->2026-09-16 20:37:02 EDT (-0400)<!-- /last-updated --></p>
 </section>
