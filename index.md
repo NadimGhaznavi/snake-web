@@ -27,8 +27,8 @@ classes: wide
       <ul class="experiment-metrics">
         <li>All-Time Highscore: 53</li>
         <li>Current Highscore: 53</li>
-        <li>Completed Experiments: 72</li>
-        <li>Simulations Run: 515</li>
+        <li>Completed Experiments: 73</li>
+        <li>Simulations Run: 516</li>
       </ul>
     </figcaption>
   </figure>
@@ -40,8 +40,9 @@ classes: wide
       <li><a href="reports/ax3l-thinking.html">Ax3l's Thinking</a></li>
       <li><a href="reports/golden-configurations.html">Golden Configurations</a></li>
       <li><a href="reports/event-log.html">Event Log</a></li>
+      <li><a href="about.html">About</a></li>
     </ul>
   </section>
   <p class="experiment-footer">Running on: neuromancer<br>
-  Last Updated: <!-- last-updated -->2026-09-19 15:21:03 EDT (-0400)<!-- /last-updated --></p>
+  Last Updated: <!-- last-updated -->2026-09-19 15:24:47 EDT (-0400)<!-- /last-updated --></p>
 </section>
