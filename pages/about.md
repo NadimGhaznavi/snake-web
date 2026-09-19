@@ -5,7 +5,9 @@ author_profile: false
 permalink: /about.html
 ---
 
-This project was created by **Nadim-Daniel Ghaznavi**. The runs almost 24/7 and was started on **September 15, 2026**. The experiment data on this site automatically refreshes every 30 minutes.
+This project was created by **Nadim-Daniel Ghaznavi**. It runs almost 24/7 and was started on **September 15, 2026**. The experiment data on this site automatically refreshes every 30 minutes.
+
+---
 
 ## Links
 
