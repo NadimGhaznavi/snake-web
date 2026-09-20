@@ -3168,6 +3168,37 @@ I&#x27;ll experiment with (5, -4) as a strategic choice to test a balanced rewar
 <nav aria-label="Ranked simulations"><button type="button" data-rank="82" aria-label="Previous ranked simulation" disabled>&lt;</button><span>Run #552 - Score: 45</span><button type="button" data-rank="84" aria-label="Next ranked simulation" disabled>&gt;</button></nav>
 </section>
 <section class="ranked-run" id="rank-84" tabindex="-1" aria-label="Rank 84 of 100">
+<div class="reasoning">The user wants me to choose an untested batch_size value to improve the current golden high score. Let me analyze the data:
+
+Current golden: batch_size=50, high_score=56
+
+Comparable runs (other settings unchanged):
+1. batch_size=48: high_score=2 (completed)
+2. batch_size=50: high_score=56 (completed) - this is the current golden
+3. batch_size=64: high_score=39 (completed)
+
+Wait, I need to re-read the instructions. It says &quot;Comparable runs (other settings unchanged): results = current seed; history = earlier-seed high scores. Empty results = untested on this seed.&quot;
+
+So the results shown are for the CURRENT seed. Looking at the data:
+- batch_size=48: completed, high_score=2
+- batch_size=50: completed, high_score=56 (golden)
+- batch_size=64: completed, high_score=39
+
+All three batch sizes have been tested on the current seed. The instruction says &quot;Choose an untested batch_size value to improve the current golden high score.&quot;
+
+So I need to pick a batch_size that hasn&#x27;t been tested yet. The valid range is 8-64 and must be a multiple of 2.
+
+Tests already done: 48, 50, 64
+
+Untested options in range (8-64, multiple of 2): 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 52, 54, 56, 58, 60, 62, 64
+
+Since all three tested batch sizes (48, 50, 64) are near the upper end of the range, I should try a smaller batch size that hasn&#x27;t been tested yet. Let me pick a reasonable value like 32, which is a common middle-ground batch size.
+ 
+I&#x27;ll submit batch_size 32 for further testing to see if it can improve the current high score.
+</div>
+<nav aria-label="Ranked simulations"><button type="button" data-rank="83" aria-label="Previous ranked simulation" disabled>&lt;</button><span>Run #555 - Score: 45</span><button type="button" data-rank="85" aria-label="Next ranked simulation" disabled>&gt;</button></nav>
+</section>
+<section class="ranked-run" id="rank-85" tabindex="-1" aria-label="Rank 85 of 100">
 <div class="reasoning">The user is asking me to tune the epsilon parameters (initial and decay) for an exploration strategy, similar to what&#x27;s used in reinforcement learning (specifically epsilon-greedy).
 
 Current golden:
@@ -3210,9 +3241,9 @@ Given the current golden score of 40, I want to find a combination that could po
 
 I&#x27;ll focus on the 0.96/0.98 pairing, as it offers a nuanced approach to exploration that could potentially unlock higher performance.
 </div>
-<nav aria-label="Ranked simulations"><button type="button" data-rank="83" aria-label="Previous ranked simulation" disabled>&lt;</button><span>Run #14 - Score: 44</span><button type="button" data-rank="85" aria-label="Next ranked simulation" disabled>&gt;</button></nav>
+<nav aria-label="Ranked simulations"><button type="button" data-rank="84" aria-label="Previous ranked simulation" disabled>&lt;</button><span>Run #14 - Score: 44</span><button type="button" data-rank="86" aria-label="Next ranked simulation" disabled>&gt;</button></nav>
 </section>
-<section class="ranked-run" id="rank-85" tabindex="-1" aria-label="Rank 85 of 100">
+<section class="ranked-run" id="rank-86" tabindex="-1" aria-label="Rank 86 of 100">
 <div class="reasoning">The user is asking me to choose an untested batch_size value to improve the current golden high score. Let me analyze the information provided:
 
 Current golden: batch_size=32, high_score=44
@@ -3227,9 +3258,9 @@ I need to pick a different batch_size value that hasn&#x27;t been tested yet. Si
 
 I&#x27;ll try 64 as it&#x27;s the maximum value and represents a larger batch size which might help improve the high score.
 </div>
-<nav aria-label="Ranked simulations"><button type="button" data-rank="84" aria-label="Previous ranked simulation" disabled>&lt;</button><span>Run #18 - Score: 44</span><button type="button" data-rank="86" aria-label="Next ranked simulation" disabled>&gt;</button></nav>
+<nav aria-label="Ranked simulations"><button type="button" data-rank="85" aria-label="Previous ranked simulation" disabled>&lt;</button><span>Run #18 - Score: 44</span><button type="button" data-rank="87" aria-label="Next ranked simulation" disabled>&gt;</button></nav>
 </section>
-<section class="ranked-run" id="rank-86" tabindex="-1" aria-label="Rank 86 of 100">
+<section class="ranked-run" id="rank-87" tabindex="-1" aria-label="Rank 87 of 100">
 <div class="reasoning">The user wants me to tune epsilon parameters (initial and decay) for exploration in what appears to be a reinforcement learning task. Let me analyze the current golden results and comparable results to find an untested pair that might improve the high score.
 
 Current golden:
@@ -3271,9 +3302,9 @@ To potentially improve, I should try:
 
 I&#x27;ll test initial=0.95 and decay=0.99 to explore a more exploratory approach. This combination might help uncover better performance by maximizing early exploration and maintaining it throughout the episodes.
 </div>
-<nav aria-label="Ranked simulations"><button type="button" data-rank="85" aria-label="Previous ranked simulation" disabled>&lt;</button><span>Run #21 - Score: 44</span><button type="button" data-rank="87" aria-label="Next ranked simulation" disabled>&gt;</button></nav>
+<nav aria-label="Ranked simulations"><button type="button" data-rank="86" aria-label="Previous ranked simulation" disabled>&lt;</button><span>Run #21 - Score: 44</span><button type="button" data-rank="88" aria-label="Next ranked simulation" disabled>&gt;</button></nav>
 </section>
-<section class="ranked-run" id="rank-87" tabindex="-1" aria-label="Rank 87 of 100">
+<section class="ranked-run" id="rank-88" tabindex="-1" aria-label="Rank 88 of 100">
 <div class="reasoning">The user is asking me to choose an untested hidden_size value to improve the current golden high score. Let me analyze the information provided:
 
 Current golden:
@@ -3315,9 +3346,9 @@ Actually, I should choose a hidden_size that has not been tested. The tested val
 
 I&#x27;ll select 320 as a promising untested value. It&#x27;s significantly larger than the current 224, which might provide more computational capacity for improving the high score.
 </div>
-<nav aria-label="Ranked simulations"><button type="button" data-rank="86" aria-label="Previous ranked simulation" disabled>&lt;</button><span>Run #37 - Score: 44</span><button type="button" data-rank="88" aria-label="Next ranked simulation" disabled>&gt;</button></nav>
+<nav aria-label="Ranked simulations"><button type="button" data-rank="87" aria-label="Previous ranked simulation" disabled>&lt;</button><span>Run #37 - Score: 44</span><button type="button" data-rank="89" aria-label="Next ranked simulation" disabled>&gt;</button></nav>
 </section>
-<section class="ranked-run" id="rank-88" tabindex="-1" aria-label="Rank 88 of 100">
+<section class="ranked-run" id="rank-89" tabindex="-1" aria-label="Rank 89 of 100">
 <div class="reasoning">The user wants me to choose an untested gamma value to improve the current golden high score (45).
 
 Current golden: gamma=0.96, high_score=45
@@ -3347,9 +3378,9 @@ Looking at the JSON, I see:
 
 I notice both runs have empty history arrays, which suggests these are initial tests. To improve the current best score of 45, I&#x27;ll try a new gamma value around 0.95, as it seems to be performing well.
 </div>
-<nav aria-label="Ranked simulations"><button type="button" data-rank="87" aria-label="Previous ranked simulation" disabled>&lt;</button><span>Run #41 - Score: 44</span><button type="button" data-rank="89" aria-label="Next ranked simulation" disabled>&gt;</button></nav>
+<nav aria-label="Ranked simulations"><button type="button" data-rank="88" aria-label="Previous ranked simulation" disabled>&lt;</button><span>Run #41 - Score: 44</span><button type="button" data-rank="90" aria-label="Next ranked simulation" disabled>&gt;</button></nav>
 </section>
-<section class="ranked-run" id="rank-89" tabindex="-1" aria-label="Rank 89 of 100">
+<section class="ranked-run" id="rank-90" tabindex="-1" aria-label="Rank 90 of 100">
 <div class="reasoning">The user wants me to choose an untested hidden_size value to improve the current golden high score of 45.
 
 Looking at the current state:
@@ -3383,9 +3414,9 @@ Actually, I should pick a value that&#x27;s definitely not tested yet. Since 224
  
 I&#x27;ll go with 288 as a promising candidate to test.
 </div>
-<nav aria-label="Ranked simulations"><button type="button" data-rank="88" aria-label="Previous ranked simulation" disabled>&lt;</button><span>Run #44 - Score: 44</span><button type="button" data-rank="90" aria-label="Next ranked simulation" disabled>&gt;</button></nav>
+<nav aria-label="Ranked simulations"><button type="button" data-rank="89" aria-label="Previous ranked simulation" disabled>&lt;</button><span>Run #44 - Score: 44</span><button type="button" data-rank="91" aria-label="Next ranked simulation" disabled>&gt;</button></nav>
 </section>
-<section class="ranked-run" id="rank-90" tabindex="-1" aria-label="Rank 90 of 100">
+<section class="ranked-run" id="rank-91" tabindex="-1" aria-label="Rank 91 of 100">
 <div class="reasoning">The user is asking me to choose an untested learning_rate value to improve the current golden high score (47). I need to submit a new learning_rate value using the submit_single_value function.
 
 From the information provided:
@@ -3398,9 +3429,9 @@ Since I need to test a new learning rate that hasn&#x27;t been tried before, I s
 
 Let me try 0.0018, which is a bit lower than the current 0.0021. This might help see if a slightly smaller learning rate can achieve a better result.
 </div>
-<nav aria-label="Ranked simulations"><button type="button" data-rank="89" aria-label="Previous ranked simulation" disabled>&lt;</button><span>Run #75 - Score: 44</span><button type="button" data-rank="91" aria-label="Next ranked simulation" disabled>&gt;</button></nav>
+<nav aria-label="Ranked simulations"><button type="button" data-rank="90" aria-label="Previous ranked simulation" disabled>&lt;</button><span>Run #75 - Score: 44</span><button type="button" data-rank="92" aria-label="Next ranked simulation" disabled>&gt;</button></nav>
 </section>
-<section class="ranked-run" id="rank-91" tabindex="-1" aria-label="Rank 91 of 100">
+<section class="ranked-run" id="rank-92" tabindex="-1" aria-label="Rank 92 of 100">
 <div class="reasoning">The user wants me to choose an untested learning_rate value to improve the current golden high score. Let me analyze the data:
 
 Current golden:
@@ -3435,9 +3466,9 @@ Wait, I need to check the constraints for submit_single_value:
 
 I&#x27;ll select 0.0022 as the untested learning rate, staying within the valid range and close to the current optimal value.
 </div>
-<nav aria-label="Ranked simulations"><button type="button" data-rank="90" aria-label="Previous ranked simulation" disabled>&lt;</button><span>Run #110 - Score: 44</span><button type="button" data-rank="92" aria-label="Next ranked simulation" disabled>&gt;</button></nav>
+<nav aria-label="Ranked simulations"><button type="button" data-rank="91" aria-label="Previous ranked simulation" disabled>&lt;</button><span>Run #110 - Score: 44</span><button type="button" data-rank="93" aria-label="Next ranked simulation" disabled>&gt;</button></nav>
 </section>
-<section class="ranked-run" id="rank-92" tabindex="-1" aria-label="Rank 92 of 100">
+<section class="ranked-run" id="rank-93" tabindex="-1" aria-label="Rank 93 of 100">
 <div class="reasoning">The user is asking me to choose an untested hidden_size value to improve the current golden high score.
 
 Current golden: hidden_size=224, high_score=51
@@ -3471,9 +3502,9 @@ Looking at the trend: 224 (51) is the best, then 304 (42), then 208 (48), then 2
  
 I&#x27;m considering values above 304 as they might provide a different performance profile. I&#x27;ll test 320 to see if it can potentially outperform the current best score.
 </div>
-<nav aria-label="Ranked simulations"><button type="button" data-rank="91" aria-label="Previous ranked simulation" disabled>&lt;</button><span>Run #135 - Score: 44</span><button type="button" data-rank="93" aria-label="Next ranked simulation" disabled>&gt;</button></nav>
+<nav aria-label="Ranked simulations"><button type="button" data-rank="92" aria-label="Previous ranked simulation" disabled>&lt;</button><span>Run #135 - Score: 44</span><button type="button" data-rank="94" aria-label="Next ranked simulation" disabled>&gt;</button></nav>
 </section>
-<section class="ranked-run" id="rank-93" tabindex="-1" aria-label="Rank 93 of 100">
+<section class="ranked-run" id="rank-94" tabindex="-1" aria-label="Rank 94 of 100">
 <div class="reasoning">The user wants me to choose an untested sequence_length value to improve the current golden high score of 51.
 
 Looking at the data provided:
@@ -3504,9 +3535,9 @@ The current best is 51 at sequence_length=28. I want to try a different value th
 
 Looking at the pattern, the results seem to peak around 12-28 and then decline. But I don&#x27;t have enough data to be certain. Let me try 16 first as it&#x27;s the next logical value in the sequence after 12.
 </div>
-<nav aria-label="Ranked simulations"><button type="button" data-rank="92" aria-label="Previous ranked simulation" disabled>&lt;</button><span>Run #136 - Score: 44</span><button type="button" data-rank="94" aria-label="Next ranked simulation" disabled>&gt;</button></nav>
+<nav aria-label="Ranked simulations"><button type="button" data-rank="93" aria-label="Previous ranked simulation" disabled>&lt;</button><span>Run #136 - Score: 44</span><button type="button" data-rank="95" aria-label="Next ranked simulation" disabled>&gt;</button></nav>
 </section>
-<section class="ranked-run" id="rank-94" tabindex="-1" aria-label="Rank 94 of 100">
+<section class="ranked-run" id="rank-95" tabindex="-1" aria-label="Rank 95 of 100">
 <div class="reasoning">The user is asking me to tune the reward parameters (closer_to_food and further_from_food) based on the provided results data. I need to analyze the current state and find an untested pair that could improve the high score.
 
 Looking at the data:
@@ -3552,9 +3583,9 @@ I see potential combinations like (4, -4) or (5, -4) that could be promising. Th
 
 The untested cells represent strategic opportunities to improve the agent&#x27;s learning and exploration strategy. By carefully selecting reward parameters, we might discover new pathways to maximize food collection efficiency.
 </div>
-<nav aria-label="Ranked simulations"><button type="button" data-rank="93" aria-label="Previous ranked simulation" disabled>&lt;</button><span>Run #155 - Score: 44</span><button type="button" data-rank="95" aria-label="Next ranked simulation" disabled>&gt;</button></nav>
+<nav aria-label="Ranked simulations"><button type="button" data-rank="94" aria-label="Previous ranked simulation" disabled>&lt;</button><span>Run #155 - Score: 44</span><button type="button" data-rank="96" aria-label="Next ranked simulation" disabled>&gt;</button></nav>
 </section>
-<section class="ranked-run" id="rank-95" tabindex="-1" aria-label="Rank 95 of 100">
+<section class="ranked-run" id="rank-96" tabindex="-1" aria-label="Rank 96 of 100">
 <div class="reasoning">The user wants me to choose an untested hidden_size value to improve the current golden high score of 43. Let me analyze the data:
 
 Current golden: hidden_size=224, high_score=43
@@ -3607,9 +3638,9 @@ However, I notice 320 has a history score of 44, which is also close to the curr
 
 The key is to find a hidden_size that hasn&#x27;t been tested yet but has a strong historical performance. This will help maximize our chances of improving the current high score of 43.
 </div>
-<nav aria-label="Ranked simulations"><button type="button" data-rank="94" aria-label="Previous ranked simulation" disabled>&lt;</button><span>Run #157 - Score: 44</span><button type="button" data-rank="96" aria-label="Next ranked simulation" disabled>&gt;</button></nav>
+<nav aria-label="Ranked simulations"><button type="button" data-rank="95" aria-label="Previous ranked simulation" disabled>&lt;</button><span>Run #157 - Score: 44</span><button type="button" data-rank="97" aria-label="Next ranked simulation" disabled>&gt;</button></nav>
 </section>
-<section class="ranked-run" id="rank-96" tabindex="-1" aria-label="Rank 96 of 100">
+<section class="ranked-run" id="rank-97" tabindex="-1" aria-label="Rank 97 of 100">
 <div class="reasoning">The user is asking me to choose an untested sequence_length value to improve the current golden high score. Let me analyze the data:
 
 Current golden: sequence_length=24, high_score=48
@@ -3643,9 +3674,9 @@ But wait, the history field shows earlier-seed high scores. For sequence_length=
 
 I&#x27;m focusing on finding an untested sequence_length that might improve performance. The data suggests shorter lengths might be more promising. I&#x27;ll investigate sequence_length=36 as a potential untested value that could provide new insights.
 </div>
-<nav aria-label="Ranked simulations"><button type="button" data-rank="95" aria-label="Previous ranked simulation" disabled>&lt;</button><span>Run #172 - Score: 44</span><button type="button" data-rank="97" aria-label="Next ranked simulation" disabled>&gt;</button></nav>
+<nav aria-label="Ranked simulations"><button type="button" data-rank="96" aria-label="Previous ranked simulation" disabled>&lt;</button><span>Run #172 - Score: 44</span><button type="button" data-rank="98" aria-label="Next ranked simulation" disabled>&gt;</button></nav>
 </section>
-<section class="ranked-run" id="rank-97" tabindex="-1" aria-label="Rank 97 of 100">
+<section class="ranked-run" id="rank-98" tabindex="-1" aria-label="Rank 98 of 100">
 <div class="reasoning">The user is asking me to choose an untested gamma value to improve the current golden high score. Let me analyze the data:
 
 Current golden: gamma=0.96, high_score=48
@@ -3663,9 +3694,9 @@ Since 0.96, 0.97, and 0.98 have been tested, I should try something outside this
 
 Let me submit 0.95 as the untested gamma value.
 </div>
-<nav aria-label="Ranked simulations"><button type="button" data-rank="96" aria-label="Previous ranked simulation" disabled>&lt;</button><span>Run #175 - Score: 44</span><button type="button" data-rank="98" aria-label="Next ranked simulation" disabled>&gt;</button></nav>
+<nav aria-label="Ranked simulations"><button type="button" data-rank="97" aria-label="Previous ranked simulation" disabled>&lt;</button><span>Run #175 - Score: 44</span><button type="button" data-rank="99" aria-label="Next ranked simulation" disabled>&gt;</button></nav>
 </section>
-<section class="ranked-run" id="rank-98" tabindex="-1" aria-label="Rank 98 of 100">
+<section class="ranked-run" id="rank-99" tabindex="-1" aria-label="Rank 99 of 100">
 <div class="reasoning">The user is asking me to choose an untested sequence_length value to improve the current golden high score of 50.
 
 Current golden: sequence_length=24, high_score=50
@@ -3691,9 +3722,9 @@ Since 24 worked well (50) and 28 worked worse (40), I might want to try a value 
 
 Let me go with 32 as a value to test - it&#x27;s higher than 28 which performed worse, but different from 24 which was good.
 </div>
-<nav aria-label="Ranked simulations"><button type="button" data-rank="97" aria-label="Previous ranked simulation" disabled>&lt;</button><span>Run #214 - Score: 44</span><button type="button" data-rank="99" aria-label="Next ranked simulation" disabled>&gt;</button></nav>
+<nav aria-label="Ranked simulations"><button type="button" data-rank="98" aria-label="Previous ranked simulation" disabled>&lt;</button><span>Run #214 - Score: 44</span><button type="button" data-rank="100" aria-label="Next ranked simulation" disabled>&gt;</button></nav>
 </section>
-<section class="ranked-run" id="rank-99" tabindex="-1" aria-label="Rank 99 of 100">
+<section class="ranked-run" id="rank-100" tabindex="-1" aria-label="Rank 100 of 100">
 <div class="reasoning">The user is asking me to choose an untested sequence_length value to improve the current golden high score. Let me analyze the data:
 
 Current golden: sequence_length=24, high_score=50
@@ -3735,95 +3766,7 @@ Actually, let me reconsider. The trend seems to show that 24 (50) &gt; 36 (47) &
 
 I&#x27;m noticing a complex pattern in sequence length performance. The data suggests an optimal point around 24, with scores declining as sequence length increases beyond that. Testing 44 could provide insights into whether this trend continues or if there&#x27;s a potential plateau in performance.
 </div>
-<nav aria-label="Ranked simulations"><button type="button" data-rank="98" aria-label="Previous ranked simulation" disabled>&lt;</button><span>Run #235 - Score: 44</span><button type="button" data-rank="100" aria-label="Next ranked simulation" disabled>&gt;</button></nav>
-</section>
-<section class="ranked-run" id="rank-100" tabindex="-1" aria-label="Rank 100 of 100">
-<div class="reasoning">The user is asking me to choose an untested hidden_size value to improve the current golden high score of 50.
-
-Let me analyze the data:
-
-Current golden: hidden_size=208, high_score=50
-
-From the comparable runs, I can see the results for various hidden_size values:
-- hidden_size 192: high_score=36
-- hidden_size 208: high_score=50 (current golden)
-- hidden_size 224: high_score=40
-- hidden_size 240: high_score=39
-- hidden_size 256: high_score=37
-- hidden_size 320: high_score=32
-
-So the best so far is 208 with 50 points.
-
-Looking at the pattern, the scores seem to peak around 208 and then decline as we go higher. But I need to check what values are untested.
-
-Looking at the JSON data, I see hidden_sizes: 192, 208, 224, 240, 256, 320.
-
-But the submit_single_value function has constraints:
-- minimum: 64
-- maximum: 384
-- multipleOf: 16
-
-So valid values would be: 64, 80, 96, 112, 128, 144, 160, 176, 192, 208, 224, 240, 256, 272, 288, 304, 320, 336, 352, 368, 384
-
-Currently tested: 192, 208, 224, 240, 256, 320
-
-Untested values in the range: 64, 80, 96, 112, 128, 144, 160, 176, 272, 288, 304, 336, 352, 368, 384
-
-Looking at the pattern from the tested values, the optimal seems to be around 208. But I should check values between 192 and 224 as well, since the score might peak somewhere in that range.
-
-Actually, 208 is already tested and is the golden (best score). The values between 192 and 208 that are multiples of 16 would be: 192, 208. There&#x27;s no untested value between 192 and 208.
-
-For values above 208, I should consider 216, 232, 248, etc. But wait, these need to be multiples of 16:
-- 208 + 16 = 224 (tested)
-- 224 + 16 = 240 (tested)
-- 240 + 16 = 256 (tested)
-- 256 + 16 = 272 (untested)
-
-So 272 would be the next logical choice after 256. But looking at the scores:
-- 208: 50
-- 224: 40
-- 240: 39
-- 256: 37
-
-It seems like the performance drops as we go beyond 208. But maybe there&#x27;s an optimal point in a different region. Let me think about this differently.
-
-Actually, I should pick a value that might be optimal. Since the current golden is 208 with 50, and the scores decline after that, I should try values that might give a better result.
-
-Looking at the pattern, it seems like the peak is around 208. But maybe I should try a value like 176 or 160 which were not tested to see if there&#x27;s another peak.
-
-Actually, I should choose 272 since it&#x27;s the next untested value after 256 in the sequence, but since the scores are declining after 208, maybe I should try values before 208 that weren&#x27;t tested.
-
-Wait, let me reconsider. The untested values are:
-- Below 192: 160, 176 (and lower)
-- Above 256: 272, 288, 304, 336, 352, 368, 384
-
-Since 208 is the best so far and the scores decline after it, I might want to try values before 208 to see if there&#x27;s a better peak. But 192 and 208 are consecutive multiples of 16 (192, 208 is not actually consecutive - 192 + 16 = 208, yes it is! 192 + 16 = 208, 208 + 16 = 224).
-
-Wait, let me recalculate:
-- 192 + 16 = 208 (yes!)
-- 208 + 16 = 224 (yes!)
-
-So there are no untested values between 192 and 224.
-
-Given the declining trend after 208, and no untested values between 192-208, I should probably try a value that hasn&#x27;t been tested yet. Let me pick 272 since it&#x27;s the next logical untested value in the sequence.
-
-Actually, I&#x27;m second-guessing. Let me think about this more carefully. The scores are:
-- 192: 36
-- 208: 50 (peak)
-- 224: 40
-- 240: 39
-- 256: 37
-- 320: 32
-
-The pattern suggests the peak is around 208. But maybe there&#x27;s another peak at lower values. Let me try 160 or 176 to see if there&#x27;s a different peak.
-
-Actually, I&#x27;ll go with 272 as it&#x27;s the next untested value in the sequence after 256. The user asked for an untested value, and 272 is the most logical choice given the pattern.
-
-Wait, but the scores are declining after 208. Let me try a value that&#x27;s been tested and performed well to see if there&#x27;s another peak. Actually, I need to try an untested value.
-
-I&#x27;ll submit 272 as it&#x27;s an untested value and follows the pattern of increasing hidden_size.
-</div>
-<nav aria-label="Ranked simulations"><button type="button" data-rank="99" aria-label="Previous ranked simulation" disabled>&lt;</button><span>Run #241 - Score: 44</span><button type="button" data-rank="1" aria-label="Next ranked simulation" disabled>&gt;</button></nav>
+<nav aria-label="Ranked simulations"><button type="button" data-rank="99" aria-label="Previous ranked simulation" disabled>&lt;</button><span>Run #235 - Score: 44</span><button type="button" data-rank="1" aria-label="Next ranked simulation" disabled>&gt;</button></nav>
 </section>
   </main>
   <nav class="report-links" aria-label="Report links">
