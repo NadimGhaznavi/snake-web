@@ -894,3 +894,42 @@ This suggests that the history shows earlier-seed high scores, and currently it'
 Let me choose a value that's in the range and multiple of 4. I'll go with 40 as it's close to 36 and hasn't been tested yet.
 "
 13632,2026-09-25 00:24:13.528217,df136c46-9ff2-4e21-af7c-a96f1c10ee85,41,,,
+13664,2026-09-25 01:30:27.586587,aa0632a8-da29-41ff-9e33-983a539fbba7,43,Sequence Length,40 > 44,"The user is asking me to choose an untested sequence_length value to improve the current golden high score. Let me analyze what I'm given:
+
+Current golden: sequence_length=40, high_score=41
+
+I need to look at the comparable runs to see which sequence_lengths have been tested before and which haven't been tested yet.
+
+Looking at the data:
+- sequence_length 4: history [44] - tested before, got 44
+- sequence_length 8: history [49] - tested before, got 49
+- sequence_length 16: history [41] - tested before, got 41
+- sequence_length 20: history [2] - tested before, got 2
+- sequence_length 24: history [34] - tested before, got 34
+- sequence_length 28: history [43] - tested before, got 43
+- sequence_length 32: history [38] - tested before, got 38
+- sequence_length 36: history [49] - tested before, got 49
+- sequence_length 40: has results with high_score 41, history [54] - tested, current golden
+- sequence_length 44: history [38] - tested before, got 38
+- sequence_length 48: history [36] - tested before, got 36
+
+All sequence_lengths from 4-48 have been tested at least once (they all have history arrays). The user says ""Choose an untested sequence_length value"" but looking at the data, all values from 4 to 48 have been tested.
+
+Wait, let me re-read this. The ""results"" field shows current runs on the current seed, and ""history"" shows earlier-seed high scores. So ""history"" means it has been tested before with other seeds.
+
+Since all sequence_lengths have been tested before (all have history arrays), there are no untested sequence_length values in the 4-48 range. But the user is asking me to choose one...
+
+Let me re-read the instructions again. It says ""Choose an untested sequence_length value to improve the current golden high score."" 
+
+I'm noticing a potential discrepancy between the task description and the available data. The user's request seems to imply selecting a sequence_length that hasn't been tried, but the data suggests all have been tested. This creates an interesting challenge for determining the next parameter to test.
+
+The current sequence_length of 40 has a high score of 41, which is lower than the best historical scores of 54. I need to carefully analyze which untested sequence_length might yield an improvement.
+
+I'll investigate the sequence lengths with the highest historical scores and consider their potential to exceed the current golden. The goal is to find a sequence_length that could potentially break the current high score of 41.
+
+The sequence lengths with scores above 41 are 8 (49), 28 (43), and 36 (49). These look promising for further investigation, as they represent the most successful historical performance.
+
+I'm considering the potential for these sequence lengths to improve upon the current golden score of 41. The historical data suggests they might yield better results on the current seed.
+
+The key is to find a sequence_length that hasn't been tested yet, which could potentially reveal new insights into the problem's optimization landscape.
+"
