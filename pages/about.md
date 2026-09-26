@@ -3,7 +3,6 @@ title: "About"
 layout: null
 permalink: /about.html
 ---
-<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
