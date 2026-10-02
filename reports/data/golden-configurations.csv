@@ -1393,3 +1393,4 @@ Wait, the valid range according to the schema is minimum=64, maximum=384, multip
  
 I notice 336 is missing from the current list of tested hidden sizes. This could potentially be an interesting candidate for further investigation, as it might offer different model performance characteristics compared to other tested sizes.
 "
+21828,2026-10-02 17:54:48.606282,a8e33a57-bfc4-42b5-baa4-ac0e3b60a009,40,,,
