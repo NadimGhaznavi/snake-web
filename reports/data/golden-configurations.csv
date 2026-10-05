@@ -1601,3 +1601,40 @@ However, I need to be careful - learning rates that are too high can cause insta
 
 Let me try 0.00215 as it's a small increment from the current golden 0.00214.
 "
+25550,2026-10-05 11:31:47.655200,e142f743-0b74-484c-99cb-1a27839178e9,48,"Epsilon: initial, decay",0.98 > 0.97,"The user wants me to tune epsilon parameters for the Snake AI project based on the provided data. Let me analyze what I see:
+
+Current golden: initial=0.9, decay=0.98, high_score=47
+
+Looking at the comparable results:
+- For initial=0.9, decay=0.98 gives score 47 (this is the current golden)
+- For initial=0.9, decay=0.97 gives empty (no scores)
+- For initial=0.9, decay=0.95 gives 43
+- For initial=0.9, decay=0.99 gives 40
+
+Looking at other initial values:
+- initial=0.87, decay=0.99 gives 37 (lower)
+- initial=0.92, decay=0.97 gives 40
+- initial=0.95, decay=0.98 gives 46
+- initial=0.95, decay=0.95 gives 40
+
+I notice that:
+1. The current golden (0.9, 0.98) already gives 47
+2. For initial=0.95, decay=0.98 gives 46 (just slightly lower)
+3. For initial=0.9, decay=0.99 gives 40 (lower)
+
+Looking at the pattern, I should try an untested combination. Let me see which pairs haven't been tested yet or have empty scores:
+
+Untested or empty pairs from the data:
+- initial=0.87, decay=0.95/0.97/0.98 (only 0.99 has data)
+- initial=0.92, decay=0.95/0.98/0.99 (only 0.97 has data)
+- initial=0.95, decay=0.97/0.99 (only 0.98 has data)
+
+So I have several options. Let me think about what would be most promising:
+
+From the golden (0.9, 0.98) = 47:
+
+
+I'll investigate the impact of lowering epsilon decay. A slightly higher decay rate might help balance exploration and exploitation. I'm particularly interested in how reducing decay from 0.98 to 0.97 might affect performance while maintaining the initial 0.9 exploration probability.
+
+The data suggests that a more gradual exploration reduction could potentially yield better results. I'll test initial=0.9 with decay=0.97 to see if this untested combination can improve the current high score.
+"
