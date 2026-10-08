@@ -1759,3 +1759,4 @@ So I should choose one of 4, 8, or 12 to test. Since the current golden is at 28
 
 I'm considering 12 as the most promising choice. It's positioned between the lower and mid-range sequence lengths, which might provide valuable insights into the performance curve. The goal is to systematically explore untested values that could potentially improve or validate the current high score of 47.
 "
+29628,2026-10-07 19:57:33.288443,46e61dc1-749a-4d24-8aa3-cf9002190528,40,,,
