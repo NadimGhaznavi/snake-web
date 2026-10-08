@@ -27,10 +27,10 @@ classes: wide
       <ul class="experiment-metrics">
         <li>All-Time Highscore: 58</li>
         <li>Current Highscore: 45</li>
-        <li>Completed Experiments: 236</li>
-        <li>Simulation Runs: 1790</li>
-        <li>Games Played: 2,680,940</li>
-        <li>Moves Made: 425,904,551</li>
+        <li>Completed Experiments: 237</li>
+        <li>Simulation Runs: 1792</li>
+        <li>Games Played: 2,684,001</li>
+        <li>Moves Made: 426,420,086</li>
       </ul>
     </figcaption>
   </figure>
@@ -46,6 +46,6 @@ classes: wide
     </ul>
   </section>
   <p class="experiment-footer">Running on: neuromancer<br>
-  Last Updated: <!-- last-updated -->2026-10-07 23:00:11 EDT (-0400)<!-- /last-updated --><br>
+  Last Updated: <!-- last-updated -->2026-10-07 23:30:11 EDT (-0400)<!-- /last-updated --><br>
   Visits: <span data-mycount-counter>…</span></p>
 </section>
