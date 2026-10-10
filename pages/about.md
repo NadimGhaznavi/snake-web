@@ -36,6 +36,7 @@ permalink: /about.html
         <li><a href="https://snakelabserver.osoyalce.com">Snake Lab Server</a></li>
         <li><a href="https://github.com/NadimGhaznavi/snake-web-code">This project on GitHub</a></li>
       </ul>
+      <p style="margin-top: .75rem;">This project is part of the <a href="https://www.osoyalce.com">osoyalce.com</a> site.</p>
     </section>
   </main>
   <nav class="about-links" aria-label="Page navigation">
