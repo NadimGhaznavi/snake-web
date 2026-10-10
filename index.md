@@ -19,9 +19,8 @@ classes: wide
 .snake-experiment .daily-games h3 { text-align: center; }
 .snake-experiment .daily-game { margin: 0; }
 .snake-experiment [hidden] { display: none !important; }
-.snake-experiment .simulation-board { display: block; width: 100%; height: auto; border: 1px solid #40566e; }
+.snake-experiment .simulation-board { display: block; width: 100%; height: auto; }
 .snake-experiment .daily-viewer { min-height: 4rem; }
-.snake-experiment figcaption { margin: .5rem 0 0; color: #a7b8cb; text-align: center; font: inherit; }
 .snake-experiment .game-navigation { display: flex; justify-content: center; align-items: center; gap: 1rem; margin-top: .75rem; }
 .snake-experiment .game-navigation button { padding: .25rem .75rem; border: 1px solid #40566e; background: #172332; color: #79b8f3; font: inherit; cursor: pointer; }
 .snake-experiment .game-navigation button:disabled { color: #66717e; border-color: #303d4b; cursor: default; }
@@ -42,8 +41,8 @@ classes: wide
           <li>Current Highscore: 43</li>
           <li>Completed Experiments: 264</li>
           <li>Simulations Submitted: 1,994</li>
-          <li>Games Played: 2,987,718</li>
-          <li>Moves Made: 477,511,834</li>
+          <li>Games Played: 2,987,838</li>
+          <li>Moves Made: 477,534,631</li>
         </ul>
       </section>
       <section class="experiment-reports" aria-labelledby="reports-title">
@@ -61,9 +60,9 @@ classes: wide
     </div>
     <section class="daily-games" aria-labelledby="daily-title">
       <h3 id="daily-title">Top 3 Daily Games</h3>
-      <div class="daily-viewer"><figure class="daily-game"><img class="simulation-board" src="reports/games/daily-1.gif?run=e0b965aa-5ef7-4612-ae74-7d090c047ac3&amp;renderer=5&amp;score=43" alt="Animated game from simulation 1992"><figcaption>Simulation #1992 - Highscore 43</figcaption></figure>
-<figure class="daily-game" hidden><img class="simulation-board" src="reports/games/daily-2.gif?run=07bad899-1dad-4509-a377-a398f1119de5&amp;renderer=5&amp;score=39" alt="Animated game from simulation 1994"><figcaption>Simulation #1994 - Highscore 39</figcaption></figure>
-<figure class="daily-game" hidden><img class="simulation-board" src="reports/games/daily-3.gif?run=771fe169-aba0-4f36-9ffc-fe12b5c86ac6&amp;renderer=5&amp;score=36" alt="Animated game from simulation 1993"><figcaption>Simulation #1993 - Highscore 36</figcaption></figure></div>
+      <div class="daily-viewer"><figure class="daily-game" aria-label="Simulation #1992 - Highscore 43"><img class="simulation-board" src="reports/games/daily-1.gif?run=e0b965aa-5ef7-4612-ae74-7d090c047ac3&amp;renderer=6&amp;score=43" alt="Animated game from simulation 1992"></figure>
+<figure class="daily-game" aria-label="Simulation #1994 - Highscore 39" hidden><img class="simulation-board" src="reports/games/daily-2.gif?run=07bad899-1dad-4509-a377-a398f1119de5&amp;renderer=6&amp;score=39" alt="Animated game from simulation 1994"></figure>
+<figure class="daily-game" aria-label="Simulation #1993 - Highscore 36" hidden><img class="simulation-board" src="reports/games/daily-3.gif?run=771fe169-aba0-4f36-9ffc-fe12b5c86ac6&amp;renderer=6&amp;score=36" alt="Animated game from simulation 1993"></figure></div>
       <nav class="game-navigation" aria-label="Daily games">
         <button type="button" data-game-step="-1" aria-label="Previous game" disabled>&#8592;</button>
         <span data-game-position aria-live="polite">1 / 3</span>
@@ -71,7 +70,7 @@ classes: wide
       </nav>
     </section>
   </div>
-  <p class="experiment-footer">Last Updated: <!-- last-updated -->2026-10-10 14:30:17 EDT (-0400)<!-- /last-updated --><br>
+  <p class="experiment-footer">Last Updated: <!-- last-updated -->2026-10-10 14:33:13 EDT (-0400)<!-- /last-updated --><br>
   Visits: <span data-mycount-counter>…</span></p>
 </section>
 <script src="reports/daily-games.js" defer></script>
