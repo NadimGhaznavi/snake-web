@@ -40,9 +40,9 @@ classes: wide
           <li>All-Time Highscore: 58</li>
           <li>Current Highscore: 43</li>
           <li>Completed Experiments: 265</li>
-          <li>Simulations Submitted: 2,001</li>
-          <li>Games Played: 2,997,305</li>
-          <li>Moves Made: 479,099,640</li>
+          <li>Simulations Submitted: 2,002</li>
+          <li>Games Played: 2,998,716</li>
+          <li>Moves Made: 479,331,931</li>
         </ul>
       </section>
       <section class="experiment-reports" aria-labelledby="reports-title">
@@ -70,7 +70,7 @@ classes: wide
       </nav>
     </section>
   </div>
-  <p class="experiment-footer">Last Updated: <!-- last-updated -->2026-10-10 18:00:15 EDT (-0400)<!-- /last-updated --><br>
+  <p class="experiment-footer">Last Updated: <!-- last-updated -->2026-10-10 18:30:17 EDT (-0400)<!-- /last-updated --><br>
   Visits: <span data-mycount-counter>…</span></p>
 </section>
 <script src="reports/daily-games.js" defer></script>
