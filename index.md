@@ -6,46 +6,71 @@ classes: wide
 ---
 
 <style>
-.snake-experiment { box-sizing: border-box; margin: 1rem 0; color: #d5dfeb; font: 15px/1.6 "Courier New", Courier, monospace; }
+.snake-experiment { box-sizing: border-box; margin: 1rem 0; padding: 1rem; border: 1px solid #40566e; background: #101720; color: #d5dfeb; font: 16px/1.6 "Courier New", Courier, monospace; }
 .snake-experiment * { box-sizing: border-box; }
-.snake-experiment .experiment-board, .snake-experiment .experiment-reports, .snake-experiment .experiment-footer { width: 100%; max-width: 540px; min-width: 0; margin: 0 auto 1rem; padding: .75rem; border: 1px solid #40566e; background: #101720; }
-.snake-experiment .current-board { border: 1px solid #40566e; }
-.snake-experiment .simulation-board { display: block; width: 100%; height: auto; margin: auto; }
-.snake-experiment .current-board p { margin: 0; padding: 1rem; color: #a7b8cb; font-size: 1em; }
-.snake-experiment figcaption { margin: .75rem 0 0; font: inherit; }
+.snake-experiment h2 { margin: 0 0 .75rem; border: 0; font: bold 1.65em/1.3 "Courier New", Courier, monospace; }
+.snake-experiment h3 { margin: 0 0 .75rem; font: bold 1.2em/1.4 "Courier New", Courier, monospace; }
+.snake-experiment .experiment-layout { display: grid; grid-template-columns: minmax(0, 1.75fr) minmax(0, 1fr); gap: 1rem; align-items: start; }
+.snake-experiment .experiment-status, .snake-experiment .experiment-reports, .snake-experiment .daily-games { min-width: 0; padding: 1rem; border: 1px solid #40566e; }
+.snake-experiment .experiment-reports { margin-top: 1rem; }
 .snake-experiment .experiment-metrics, .snake-experiment .report-names { display: flex; flex-direction: column; gap: .35rem; margin: 0; padding: 0; list-style: none; }
 .snake-experiment li { margin: 0; padding: 0; font-size: 1em; overflow-wrap: anywhere; }
-.snake-experiment .report-names { gap: 0; }
-.snake-experiment .report-names a { display: block; }
-.snake-experiment .experiment-footer { font: inherit; overflow-wrap: anywhere; }
+.snake-experiment a { color: #79b8f3; text-decoration: underline; }
+.snake-experiment .daily-games h3 { text-align: center; }
+.snake-experiment .daily-game { margin: 0; }
+.snake-experiment [hidden] { display: none !important; }
+.snake-experiment .simulation-board { display: block; width: 100%; height: auto; border: 1px solid #40566e; }
+.snake-experiment .daily-viewer { min-height: 4rem; }
+.snake-experiment figcaption { margin: .5rem 0 0; color: #a7b8cb; text-align: center; font: inherit; }
+.snake-experiment .game-navigation { display: flex; justify-content: center; align-items: center; gap: 1rem; margin-top: .75rem; }
+.snake-experiment .game-navigation button { padding: .25rem .75rem; border: 1px solid #40566e; background: #172332; color: #79b8f3; font: inherit; cursor: pointer; }
+.snake-experiment .game-navigation button:disabled { color: #66717e; border-color: #303d4b; cursor: default; }
+.snake-experiment .game-navigation button:focus-visible { outline: 2px solid #79b8f3; outline-offset: 3px; }
+.snake-experiment .experiment-footer { margin: 1rem 0 0; color: #a7b8cb; font: inherit; overflow-wrap: anywhere; }
+@media (max-width: 760px) { .snake-experiment .experiment-layout { grid-template-columns: minmax(0, 1fr); } }
 </style>
 
-<section class="snake-experiment" aria-label="Experiment overview">
-  <figure class="experiment-board" aria-label="Current highscore snapshot and experiment metrics">
-    <div class="current-board"><svg xmlns="http://www.w3.org/2000/svg" width="640" height="640" viewBox="0 0 640 640" role="img" aria-label="Saved high-score Snake Lab board" class="simulation-board"><rect width="100%" height="100%" fill="#101720" /><line x1="0" y1="0" x2="0" y2="640" stroke="#23364b" /><line x1="32" y1="0" x2="32" y2="640" stroke="#23364b" /><line x1="64" y1="0" x2="64" y2="640" stroke="#23364b" /><line x1="96" y1="0" x2="96" y2="640" stroke="#23364b" /><line x1="128" y1="0" x2="128" y2="640" stroke="#23364b" /><line x1="160" y1="0" x2="160" y2="640" stroke="#23364b" /><line x1="192" y1="0" x2="192" y2="640" stroke="#23364b" /><line x1="224" y1="0" x2="224" y2="640" stroke="#23364b" /><line x1="256" y1="0" x2="256" y2="640" stroke="#23364b" /><line x1="288" y1="0" x2="288" y2="640" stroke="#23364b" /><line x1="320" y1="0" x2="320" y2="640" stroke="#23364b" /><line x1="352" y1="0" x2="352" y2="640" stroke="#23364b" /><line x1="384" y1="0" x2="384" y2="640" stroke="#23364b" /><line x1="416" y1="0" x2="416" y2="640" stroke="#23364b" /><line x1="448" y1="0" x2="448" y2="640" stroke="#23364b" /><line x1="480" y1="0" x2="480" y2="640" stroke="#23364b" /><line x1="512" y1="0" x2="512" y2="640" stroke="#23364b" /><line x1="544" y1="0" x2="544" y2="640" stroke="#23364b" /><line x1="576" y1="0" x2="576" y2="640" stroke="#23364b" /><line x1="608" y1="0" x2="608" y2="640" stroke="#23364b" /><line x1="640" y1="0" x2="640" y2="640" stroke="#23364b" /><line x1="0" y1="0" x2="640" y2="0" stroke="#23364b" /><line x1="0" y1="32" x2="640" y2="32" stroke="#23364b" /><line x1="0" y1="64" x2="640" y2="64" stroke="#23364b" /><line x1="0" y1="96" x2="640" y2="96" stroke="#23364b" /><line x1="0" y1="128" x2="640" y2="128" stroke="#23364b" /><line x1="0" y1="160" x2="640" y2="160" stroke="#23364b" /><line x1="0" y1="192" x2="640" y2="192" stroke="#23364b" /><line x1="0" y1="224" x2="640" y2="224" stroke="#23364b" /><line x1="0" y1="256" x2="640" y2="256" stroke="#23364b" /><line x1="0" y1="288" x2="640" y2="288" stroke="#23364b" /><line x1="0" y1="320" x2="640" y2="320" stroke="#23364b" /><line x1="0" y1="352" x2="640" y2="352" stroke="#23364b" /><line x1="0" y1="384" x2="640" y2="384" stroke="#23364b" /><line x1="0" y1="416" x2="640" y2="416" stroke="#23364b" /><line x1="0" y1="448" x2="640" y2="448" stroke="#23364b" /><line x1="0" y1="480" x2="640" y2="480" stroke="#23364b" /><line x1="0" y1="512" x2="640" y2="512" stroke="#23364b" /><line x1="0" y1="544" x2="640" y2="544" stroke="#23364b" /><line x1="0" y1="576" x2="640" y2="576" stroke="#23364b" /><line x1="0" y1="608" x2="640" y2="608" stroke="#23364b" /><line x1="0" y1="640" x2="640" y2="640" stroke="#23364b" /><rect x="34" y="66" width="28" height="28" rx="5" fill="#4c9be8" /><rect x="2" y="66" width="28" height="28" rx="5" fill="#4c9be8" /><rect x="2" y="98" width="28" height="28" rx="5" fill="#4c9be8" /><rect x="2" y="130" width="28" height="28" rx="5" fill="#4c9be8" /><rect x="2" y="162" width="28" height="28" rx="5" fill="#4c9be8" /><rect x="2" y="194" width="28" height="28" rx="5" fill="#4c9be8" /><rect x="2" y="226" width="28" height="28" rx="5" fill="#4c9be8" /><rect x="34" y="226" width="28" height="28" rx="5" fill="#4c9be8" /><rect x="66" y="226" width="28" height="28" rx="5" fill="#4c9be8" /><rect x="98" y="226" width="28" height="28" rx="5" fill="#4c9be8" /><rect x="130" y="226" width="28" height="28" rx="5" fill="#4c9be8" /><rect x="162" y="226" width="28" height="28" rx="5" fill="#4c9be8" /><rect x="194" y="226" width="28" height="28" rx="5" fill="#4c9be8" /><rect x="226" y="226" width="28" height="28" rx="5" fill="#4c9be8" /><rect x="258" y="226" width="28" height="28" rx="5" fill="#4c9be8" /><rect x="290" y="226" width="28" height="28" rx="5" fill="#4c9be8" /><rect x="322" y="226" width="28" height="28" rx="5" fill="#4c9be8" /><rect x="354" y="226" width="28" height="28" rx="5" fill="#4c9be8" /><rect x="386" y="226" width="28" height="28" rx="5" fill="#4c9be8" /><rect x="418" y="226" width="28" height="28" rx="5" fill="#4c9be8" /><rect x="450" y="226" width="28" height="28" rx="5" fill="#4c9be8" /><rect x="450" y="194" width="28" height="28" rx="5" fill="#4c9be8" /><rect x="482" y="194" width="28" height="28" rx="5" fill="#4c9be8" /><rect x="514" y="194" width="28" height="28" rx="5" fill="#4c9be8" /><rect x="546" y="194" width="28" height="28" rx="5" fill="#4c9be8" /><rect x="578" y="194" width="28" height="28" rx="5" fill="#4c9be8" /><rect x="610" y="194" width="28" height="28" rx="5" fill="#4c9be8" /><rect x="610" y="226" width="28" height="28" rx="5" fill="#4c9be8" /><rect x="610" y="258" width="28" height="28" rx="5" fill="#4c9be8" /><rect x="610" y="290" width="28" height="28" rx="5" fill="#4c9be8" /><rect x="610" y="322" width="28" height="28" rx="5" fill="#4c9be8" /><rect x="610" y="354" width="28" height="28" rx="5" fill="#4c9be8" /><rect x="610" y="386" width="28" height="28" rx="5" fill="#4c9be8" /><rect x="610" y="418" width="28" height="28" rx="5" fill="#4c9be8" /><rect x="610" y="450" width="28" height="28" rx="5" fill="#4c9be8" /><rect x="610" y="482" width="28" height="28" rx="5" fill="#4c9be8" /><rect x="610" y="514" width="28" height="28" rx="5" fill="#4c9be8" /><rect x="578" y="514" width="28" height="28" rx="5" fill="#4c9be8" /><rect x="546" y="514" width="28" height="28" rx="5" fill="#4c9be8" /><rect x="514" y="514" width="28" height="28" rx="5" fill="#4c9be8" /><rect x="482" y="514" width="28" height="28" rx="5" fill="#4c9be8" /><rect x="450" y="514" width="28" height="28" rx="5" fill="#4c9be8" /><rect x="418" y="514" width="28" height="28" rx="5" fill="#4c9be8" /><rect x="386" y="514" width="28" height="28" rx="5" fill="#4c9be8" /><rect x="65" y="65" width="30" height="30" rx="6" fill="#79b8f3" /><circle cx="368.0" cy="336.0" r="9.6" fill="#f09445" /></svg></div>
-    <figcaption>
-      <ul class="experiment-metrics">
-        <li>All-Time Highscore: 58</li>
-        <li>Current Highscore: 42</li>
-        <li>Completed Experiments: 264</li>
-        <li>Simulation Runs: 1991</li>
-        <li>Games Played: 2,983,192</li>
-        <li>Moves Made: 476,975,580</li>
-      </ul>
-    </figcaption>
-  </figure>
-  <section class="experiment-reports" aria-label="Reports">
-    <ul class="report-names">
-      <li><a href="reports/top-100.html">Top 100</a></li>
-      <li><a href="reports/score-distribution.html">Score Distribution</a></li>
-      <li><a href="reports/experiment-highscores.html">Experiment Highscores</a></li>
-      <li><a href="reports/ax3l-thinking.html">Ax3l's Thinking</a></li>
-      <li><a href="reports/golden-configurations.html">Golden Configurations</a></li>
-      <li><a href="reports/event-log.html">Event Log</a></li>
-      <li><a href="about.html">About</a></li>
-    </ul>
-  </section>
-  <p class="experiment-footer">Running on: neuromancer<br>
-  Last Updated: <!-- last-updated -->2026-10-10 13:00:13 EDT (-0400)<!-- /last-updated --><br>
+<section class="snake-experiment" aria-labelledby="experiment-title">
+  <h2 id="experiment-title">Live Ax3l Experiment Data</h2>
+  <div class="experiment-layout">
+    <div>
+      <section class="experiment-status" aria-labelledby="status-title">
+        <h3 id="status-title">Status</h3>
+        <ul class="experiment-metrics">
+          <li>Hostname: neuromancer</li>
+          <li>All-Time Highscore: 58</li>
+          <li>Current Highscore: 43</li>
+          <li>Completed Experiments: 264</li>
+          <li>Simulations Submitted: 1,993</li>
+          <li>Games Played: 2,986,115</li>
+          <li>Moves Made: 477,256,677</li>
+        </ul>
+      </section>
+      <section class="experiment-reports" aria-labelledby="reports-title">
+        <h3 id="reports-title">Reports</h3>
+        <ul class="report-names">
+          <li><a href="reports/top-100.html">Top 100</a></li>
+          <li><a href="reports/score-distribution.html">Score Distribution Histogram</a></li>
+          <li><a href="reports/experiment-highscores.html">Experiment Highscores</a></li>
+          <li><a href="reports/ax3l-thinking.html">Ax3l's Thinking</a></li>
+          <li><a href="reports/golden-configurations.html">Golden Configurations</a></li>
+          <li><a href="reports/event-log.html">Event Log</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </section>
+    </div>
+    <section class="daily-games" aria-labelledby="daily-title">
+      <h3 id="daily-title">Top 3 Daily Games</h3>
+      <div class="daily-viewer"><figure class="daily-game"><img class="simulation-board" src="reports/games/daily-1.gif?run=e0b965aa-5ef7-4612-ae74-7d090c047ac3&amp;renderer=5&amp;score=43" alt="Animated game from simulation 1992"><figcaption>Simulation #1992 - Highscore 43</figcaption></figure>
+<figure class="daily-game" hidden><img class="simulation-board" src="reports/games/daily-2.gif?run=771fe169-aba0-4f36-9ffc-fe12b5c86ac6&amp;renderer=5&amp;score=36" alt="Animated game from simulation 1993"><figcaption>Simulation #1993 - Highscore 36</figcaption></figure></div>
+      <nav class="game-navigation" aria-label="Daily games">
+        <button type="button" data-game-step="-1" aria-label="Previous game" disabled>&#8592;</button>
+        <span data-game-position aria-live="polite">1 / 2</span>
+        <button type="button" data-game-step="1" aria-label="Next game" disabled>&#8594;</button>
+      </nav>
+    </section>
+  </div>
+  <p class="experiment-footer">Last Updated: <!-- last-updated -->2026-10-10 13:54:37 EDT (-0400)<!-- /last-updated --><br>
   Visits: <span data-mycount-counter>…</span></p>
 </section>
+<script src="reports/daily-games.js" defer></script>

@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "day": "2026-10-10",
+  "renderer": 5,
+  "duration_ms": 75,
+  "games": [
+    {
+      "id": 1992,
+      "run_id": "e0b965aa-5ef7-4612-ae74-7d090c047ac3",
+      "high_score": 43
+    },
+    {
+      "id": 1993,
+      "run_id": "771fe169-aba0-4f36-9ffc-fe12b5c86ac6",
+      "high_score": 36
+    }
+  ]
+}
