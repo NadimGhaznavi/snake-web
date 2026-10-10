@@ -39,10 +39,10 @@ classes: wide
           <li>Hostname: neuromancer</li>
           <li>All-Time Highscore: 58</li>
           <li>Current Highscore: 43</li>
-          <li>Completed Experiments: 264</li>
-          <li>Simulations Submitted: 1,996</li>
-          <li>Games Played: 2,990,474</li>
-          <li>Moves Made: 477,977,577</li>
+          <li>Completed Experiments: 265</li>
+          <li>Simulations Submitted: 1,997</li>
+          <li>Games Played: 2,992,422</li>
+          <li>Moves Made: 478,316,885</li>
         </ul>
       </section>
       <section class="experiment-reports" aria-labelledby="reports-title">
@@ -61,8 +61,8 @@ classes: wide
     <section class="daily-games" aria-labelledby="daily-title">
       <h3 id="daily-title">Top 3 Daily Games</h3>
       <div class="daily-viewer"><figure class="daily-game" aria-label="Simulation #1992 - Highscore 43"><img class="simulation-board" src="reports/games/daily-1.gif?run=e0b965aa-5ef7-4612-ae74-7d090c047ac3&amp;renderer=6&amp;score=43" alt="Animated game from simulation 1992"></figure>
-<figure class="daily-game" aria-label="Simulation #1995 - Highscore 41" hidden><img class="simulation-board" src="reports/games/daily-2.gif?run=d6c9b714-8dc8-4cb8-bf72-82bdc042dca5&amp;renderer=6&amp;score=41" alt="Animated game from simulation 1995"></figure>
-<figure class="daily-game" aria-label="Simulation #1994 - Highscore 39" hidden><img class="simulation-board" src="reports/games/daily-3.gif?run=07bad899-1dad-4509-a377-a398f1119de5&amp;renderer=6&amp;score=39" alt="Animated game from simulation 1994"></figure></div>
+<figure class="daily-game" aria-label="Simulation #1997 - Highscore 42" hidden><img class="simulation-board" src="reports/games/daily-2.gif?run=d5590974-63d2-4960-a9da-51a0d12d02ad&amp;renderer=6&amp;score=42" alt="Animated game from simulation 1997"></figure>
+<figure class="daily-game" aria-label="Simulation #1995 - Highscore 41" hidden><img class="simulation-board" src="reports/games/daily-3.gif?run=d6c9b714-8dc8-4cb8-bf72-82bdc042dca5&amp;renderer=6&amp;score=41" alt="Animated game from simulation 1995"></figure></div>
       <nav class="game-navigation" aria-label="Daily games">
         <button type="button" data-game-step="-1" aria-label="Previous game" disabled>&#8592;</button>
         <span data-game-position aria-live="polite">1 / 3</span>
@@ -70,7 +70,7 @@ classes: wide
       </nav>
     </section>
   </div>
-  <p class="experiment-footer">Last Updated: <!-- last-updated -->2026-10-10 15:30:15 EDT (-0400)<!-- /last-updated --><br>
+  <p class="experiment-footer">Last Updated: <!-- last-updated -->2026-10-10 16:00:18 EDT (-0400)<!-- /last-updated --><br>
   Visits: <span data-mycount-counter>…</span></p>
 </section>
 <script src="reports/daily-games.js" defer></script>
