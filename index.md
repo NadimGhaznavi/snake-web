@@ -39,10 +39,10 @@ classes: wide
           <li>Hostname: neuromancer</li>
           <li>All-Time Highscore: 58</li>
           <li>Current Highscore: 43</li>
-          <li>Completed Experiments: 266</li>
-          <li>Simulations Submitted: 2,010</li>
-          <li>Games Played: 3,011,393</li>
-          <li>Moves Made: 481,557,338</li>
+          <li>Completed Experiments: 267</li>
+          <li>Simulations Submitted: 2,011</li>
+          <li>Games Played: 3,012,716</li>
+          <li>Moves Made: 481,825,083</li>
         </ul>
       </section>
       <section class="experiment-reports" aria-labelledby="reports-title">
@@ -70,7 +70,7 @@ classes: wide
       </nav>
     </section>
   </div>
-  <p class="experiment-footer">Last Updated: <!-- last-updated -->2026-10-10 23:00:15 EDT (-0400)<!-- /last-updated --><br>
+  <p class="experiment-footer">Last Updated: <!-- last-updated -->2026-10-10 23:30:14 EDT (-0400)<!-- /last-updated --><br>
   Visits: <span data-mycount-counter>…</span></p>
 </section>
 <script src="reports/daily-games.js" defer></script>
