@@ -30,6 +30,11 @@
       "high_score": 43
     },
     {
+      "id": 2022,
+      "run_id": "2b43b07d-b80c-4200-8fe0-9f7620329686",
+      "high_score": 43
+    },
+    {
       "id": 2010,
       "run_id": "4c58e901-168a-4be3-a8f6-be3afd7ee184",
       "high_score": 42
@@ -48,11 +53,6 @@
       "id": 2018,
       "run_id": "b0a67da2-4132-4c6d-8be8-c1fad039d39b",
       "high_score": 41
-    },
-    {
-      "id": 2011,
-      "run_id": "a7036ed2-91ed-4b01-8790-23a42655be8d",
-      "high_score": 38
     }
   ]
 }
