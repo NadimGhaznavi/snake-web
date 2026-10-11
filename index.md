@@ -11,10 +11,10 @@ classes: wide
 .snake-experiment h2 { margin: 0 0 .75rem; border: 0; font: bold 1.65em/1.3 "Courier New", Courier, monospace; }
 .snake-experiment h3 { margin: 0 0 .75rem; font: bold 1.2em/1.4 "Courier New", Courier, monospace; }
 .snake-experiment .experiment-layout { display: grid; grid-template-columns: minmax(0, 1.75fr) minmax(0, 1fr); gap: 1rem; align-items: start; }
-.snake-experiment .experiment-status, .snake-experiment .experiment-reports, .snake-experiment .daily-games, .snake-experiment .daily-progress { min-width: 0; padding: 1rem; border: 1px solid #40566e; }
+.snake-experiment .experiment-status, .snake-experiment .experiment-reports, .snake-experiment .daily-games { min-width: 0; padding: 1rem; border: 1px solid #40566e; }
 .snake-experiment .daily-progress { margin-top: 1rem; }
 .snake-experiment .experiment-visualizations { min-width: 0; }
-.snake-experiment .progress-chart { display: block; width: 100%; height: auto; }
+.snake-experiment .progress-chart { display: block; width: 100%; height: auto; border: 2px solid #40566e; }
 .snake-experiment .experiment-reports { margin-top: 1rem; }
 .snake-experiment .experiment-metrics, .snake-experiment .report-names { display: flex; flex-direction: column; gap: .35rem; margin: 0; padding: 0; list-style: none; }
 .snake-experiment li { margin: 0; padding: 0; font-size: 1em; overflow-wrap: anywhere; }
@@ -44,8 +44,8 @@ classes: wide
           <li>Current Highscore: 50</li>
           <li>Completed Experiments: 270</li>
           <li>Simulations Submitted: 2,033</li>
-          <li>Games Played: 3,045,521</li>
-          <li>Moves Made: 487,558,575</li>
+          <li>Games Played: 3,045,988</li>
+          <li>Moves Made: 487,656,698</li>
         </ul>
       </section>
       <section class="experiment-reports" aria-labelledby="reports-title">
@@ -79,13 +79,13 @@ classes: wide
           <span data-game-position aria-live="polite">1 / 10</span>
           <button type="button" data-game-step="1" aria-label="Next game" disabled>&#8594;</button>
         </nav>
-      </section>
-      <section class="daily-progress" aria-label="Daily configuration score progress">
-        <img class="progress-chart" src="reports/games/daily-progress.gif?v=0dce1d0c5c42505a" alt="Animated top ten configuration scores, lowest to highest, for 2026-10-11; 4 observed half-hour updates.">
+        <section class="daily-progress" aria-label="Daily configuration score progress">
+          <img class="progress-chart" src="reports/games/daily-progress.gif?v=0dce1d0c5c42505a" alt="Animated top ten configuration scores, lowest to highest, for 2026-10-11; 4 observed half-hour updates.">
+        </section>
       </section>
     </div>
   </div>
-  <p class="experiment-footer">Last Updated: <!-- last-updated -->2026-10-11 08:30:13 EDT (-0400)<!-- /last-updated --><br>
+  <p class="experiment-footer">Last Updated: <!-- last-updated -->2026-10-11 08:39:36 EDT (-0400)<!-- /last-updated --><br>
   Visits: <span data-mycount-counter>…</span></p>
 </section>
 <script src="reports/daily-games.js" defer></script>
