@@ -1,23 +1,23 @@
 {
   "version": 1,
-  "day": "2026-10-10",
+  "day": "2026-10-11",
   "renderer": 6,
   "duration_ms": 75,
   "games": [
     {
-      "id": 1992,
-      "run_id": "e0b965aa-5ef7-4612-ae74-7d090c047ac3",
+      "id": 2009,
+      "run_id": "222b4e25-97cd-4c59-883e-5a1be7691ae7",
       "high_score": 43
     },
     {
-      "id": 1997,
-      "run_id": "d5590974-63d2-4960-a9da-51a0d12d02ad",
+      "id": 2010,
+      "run_id": "4c58e901-168a-4be3-a8f6-be3afd7ee184",
       "high_score": 42
     },
     {
-      "id": 2004,
-      "run_id": "89ba1ed7-86ee-4f57-a4c2-c39754871949",
-      "high_score": 42
+      "id": 2006,
+      "run_id": "aaafd447-39a7-46c1-935a-385f734460ba",
+      "high_score": 41
     }
   ]
 }
