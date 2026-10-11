@@ -186,6 +186,52 @@
           "high_score": 41
         }
       ]
+    },
+    {
+      "slot": 17,
+      "observed_at": "2026-10-11T09:00:11",
+      "configurations": [
+        {
+          "id": 2019,
+          "high_score": 44
+        },
+        {
+          "id": 2009,
+          "high_score": 43
+        },
+        {
+          "id": 2015,
+          "high_score": 43
+        },
+        {
+          "id": 2016,
+          "high_score": 43
+        },
+        {
+          "id": 2020,
+          "high_score": 43
+        },
+        {
+          "id": 2022,
+          "high_score": 43
+        },
+        {
+          "id": 2010,
+          "high_score": 42
+        },
+        {
+          "id": 2023,
+          "high_score": 42
+        },
+        {
+          "id": 2024,
+          "high_score": 42
+        },
+        {
+          "id": 2006,
+          "high_score": 41
+        }
+      ]
     }
   ]
 }
