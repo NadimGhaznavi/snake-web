@@ -14,7 +14,7 @@ classes: wide
 .snake-experiment .experiment-status, .snake-experiment .experiment-reports, .snake-experiment .daily-games { min-width: 0; padding: 1rem; border: 1px solid #40566e; }
 .snake-experiment .daily-progress { margin-top: 1rem; }
 .snake-experiment .experiment-visualizations { min-width: 0; }
-.snake-experiment .progress-chart { display: block; width: 100%; height: auto; border: 2px solid #40566e; }
+.snake-experiment .progress-chart { display: block; width: 100%; height: auto; border: 1px solid #40566e; }
 .snake-experiment .experiment-reports { margin-top: 1rem; }
 .snake-experiment .experiment-metrics, .snake-experiment .report-names { display: flex; flex-direction: column; gap: .35rem; margin: 0; padding: 0; list-style: none; }
 .snake-experiment li { margin: 0; padding: 0; font-size: 1em; overflow-wrap: anywhere; }
@@ -43,9 +43,9 @@ classes: wide
           <li>All-Time Highscore: 58</li>
           <li>Current Highscore: 50</li>
           <li>Completed Experiments: 270</li>
-          <li>Simulations Submitted: 2,033</li>
-          <li>Games Played: 3,045,988</li>
-          <li>Moves Made: 487,656,698</li>
+          <li>Simulations Submitted: 2,034</li>
+          <li>Games Played: 3,046,529</li>
+          <li>Moves Made: 487,766,983</li>
         </ul>
       </section>
       <section class="experiment-reports" aria-labelledby="reports-title">
@@ -85,7 +85,7 @@ classes: wide
       </section>
     </div>
   </div>
-  <p class="experiment-footer">Last Updated: <!-- last-updated -->2026-10-11 08:39:36 EDT (-0400)<!-- /last-updated --><br>
+  <p class="experiment-footer">Last Updated: <!-- last-updated -->2026-10-11 08:49:52 EDT (-0400)<!-- /last-updated --><br>
   Visits: <span data-mycount-counter>…</span></p>
 </section>
 <script src="reports/daily-games.js" defer></script>
