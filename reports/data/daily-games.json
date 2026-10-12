@@ -5,6 +5,11 @@
   "duration_ms": 75,
   "games": [
     {
+      "id": 2075,
+      "run_id": "52216cdd-29fd-4b8e-9bd6-2ff4bd9484ad",
+      "high_score": 45
+    },
+    {
       "id": 2066,
       "run_id": "1e409300-8a65-4396-a6ed-18802429341a",
       "high_score": 43
@@ -30,6 +35,16 @@
       "high_score": 43
     },
     {
+      "id": 2074,
+      "run_id": "2684613a-a8ee-4cd4-9674-209fdfe18b11",
+      "high_score": 43
+    },
+    {
+      "id": 2076,
+      "run_id": "fd99bbb5-3d03-4f42-b50a-82e210a88620",
+      "high_score": 43
+    },
+    {
       "id": 2068,
       "run_id": "f3358584-b071-4374-bb08-321d8b580295",
       "high_score": 42
@@ -38,11 +53,6 @@
       "id": 2070,
       "run_id": "67dd8130-fcff-48fc-9b83-4d39d2204f1d",
       "high_score": 42
-    },
-    {
-      "id": 2069,
-      "run_id": "684c839c-184c-41ad-b9c4-2a9900e5e66d",
-      "high_score": 38
     }
   ]
 }
