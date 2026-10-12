@@ -1,58 +1,7 @@
 {
   "version": 1,
-  "day": "2026-10-11",
+  "day": "2026-10-12",
   "renderer": 6,
   "duration_ms": 75,
-  "games": [
-    {
-      "id": 2030,
-      "run_id": "22e4ae26-336b-423a-8268-c9a46f01a71a",
-      "high_score": 50
-    },
-    {
-      "id": 2019,
-      "run_id": "fc66bda7-e4be-4c65-827e-7b0d5203d328",
-      "high_score": 44
-    },
-    {
-      "id": 2050,
-      "run_id": "46b1f22b-6339-43a5-afa5-f633577633ea",
-      "high_score": 44
-    },
-    {
-      "id": 2064,
-      "run_id": "711f558d-5509-4124-addb-8f3379be9c99",
-      "high_score": 44
-    },
-    {
-      "id": 2009,
-      "run_id": "222b4e25-97cd-4c59-883e-5a1be7691ae7",
-      "high_score": 43
-    },
-    {
-      "id": 2015,
-      "run_id": "83b4dd4c-c26e-455f-b36d-9f91fbba48f1",
-      "high_score": 43
-    },
-    {
-      "id": 2016,
-      "run_id": "26d86d56-39a0-4652-8bd2-350af260f8e4",
-      "high_score": 43
-    },
-    {
-      "id": 2020,
-      "run_id": "7f79d50a-2f2e-4501-987a-457b9b4da75f",
-      "high_score": 43
-    },
-    {
-      "id": 2022,
-      "run_id": "2b43b07d-b80c-4200-8fe0-9f7620329686",
-      "high_score": 43
-    },
-    {
-      "id": 2026,
-      "run_id": "04b301d0-6eff-41e3-8266-ebd572cec3d8",
-      "high_score": 43
-    }
-  ]
+  "games": []
 }
