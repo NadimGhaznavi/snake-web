@@ -42,10 +42,10 @@ classes: wide
           <li>Hostname: neuromancer</li>
           <li>All-Time Highscore: 58</li>
           <li>Current Highscore: 53</li>
-          <li>Completed Experiments: 281</li>
-          <li>Simulations Submitted: 2,115</li>
-          <li>Games Played: 3,168,588</li>
-          <li>Moves Made: 509,633,395</li>
+          <li>Completed Experiments: 282</li>
+          <li>Simulations Submitted: 2,116</li>
+          <li>Games Played: 3,170,270</li>
+          <li>Moves Made: 509,871,311</li>
         </ul>
       </section>
       <section class="experiment-reports" aria-labelledby="reports-title">
@@ -80,12 +80,12 @@ classes: wide
           <button type="button" data-game-step="1" aria-label="Next game" disabled>&#8594;</button>
         </nav>
         <section class="daily-progress" aria-label="Daily configuration score progress">
-          <img class="progress-chart" src="reports/games/daily-progress.gif?v=55624bba8a3be415" alt="Animated top ten configuration scores, lowest to highest, for 2026-10-12; 37 observed half-hour updates.">
+          <img class="progress-chart" src="reports/games/daily-progress.gif?v=0c624dd114972e85" alt="Animated top ten configuration scores, lowest to highest, for 2026-10-12; 38 observed half-hour updates.">
         </section>
       </section>
     </div>
   </div>
-  <p class="experiment-footer">Last Updated: <!-- last-updated -->2026-10-12 14:30:15 EDT (-0400)<!-- /last-updated --><br>
+  <p class="experiment-footer">Last Updated: <!-- last-updated -->2026-10-12 15:00:15 EDT (-0400)<!-- /last-updated --><br>
   Visits: <span data-mycount-counter>…</span></p>
 </section>
 <script src="reports/daily-games.js" defer></script>
