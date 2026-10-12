@@ -3,5 +3,11 @@
   "day": "2026-10-12",
   "renderer": 6,
   "duration_ms": 75,
-  "games": []
+  "games": [
+    {
+      "id": 2066,
+      "run_id": "1e409300-8a65-4396-a6ed-18802429341a",
+      "high_score": 43
+    }
+  ]
 }
