@@ -5,6 +5,11 @@
   "duration_ms": 75,
   "games": [
     {
+      "id": 2080,
+      "run_id": "002f858a-250f-44fe-86f9-dc1ee75d313b",
+      "high_score": 53
+    },
+    {
       "id": 2075,
       "run_id": "52216cdd-29fd-4b8e-9bd6-2ff4bd9484ad",
       "high_score": 45
@@ -47,11 +52,6 @@
     {
       "id": 2078,
       "run_id": "7329f17e-fb77-4fc0-b066-6bea1ee53340",
-      "high_score": 43
-    },
-    {
-      "id": 2079,
-      "run_id": "117398ed-cfed-4ac5-aa11-c3484257cb4f",
       "high_score": 43
     }
   ]
