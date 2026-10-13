@@ -43,9 +43,9 @@ classes: wide
           <li>All-Time Highscore: 58</li>
           <li>Current Highscore: 53</li>
           <li>Completed Experiments: 285</li>
-          <li>Simulations Submitted: 2,137</li>
-          <li>Games Played: 3,201,712</li>
-          <li>Moves Made: 515,113,599</li>
+          <li>Simulations Submitted: 2,140</li>
+          <li>Games Played: 3,205,560</li>
+          <li>Moves Made: 515,620,541</li>
         </ul>
       </section>
       <section class="experiment-reports" aria-labelledby="reports-title">
@@ -67,20 +67,23 @@ classes: wide
         <div class="daily-viewer"><figure class="daily-game" aria-label="Simulation #2133 - Highscore 46"><img class="simulation-board" src="reports/games/daily-1.gif?run=5cdaff5d-3932-4e4c-8a77-2544898b1aa8&amp;renderer=6&amp;score=46" alt="Animated game from simulation 2133"></figure>
 <figure class="daily-game" aria-label="Simulation #2135 - Highscore 43" hidden><img class="simulation-board" src="reports/games/daily-2.gif?run=d02cb7bc-49dd-4d53-8bf4-ed9f804f02c9&amp;renderer=6&amp;score=43" alt="Animated game from simulation 2135"></figure>
 <figure class="daily-game" aria-label="Simulation #2136 - Highscore 43" hidden><img class="simulation-board" src="reports/games/daily-3.gif?run=1bd35e06-d1e4-458a-95d4-c0053afd26aa&amp;renderer=6&amp;score=43" alt="Animated game from simulation 2136"></figure>
-<figure class="daily-game" aria-label="Simulation #2134 - Highscore 37" hidden><img class="simulation-board" src="reports/games/daily-4.gif?run=71a070cb-4d8c-44f1-83f4-0c5391b3eb75&amp;renderer=6&amp;score=37" alt="Animated game from simulation 2134"></figure>
-<figure class="daily-game" aria-label="Simulation #2137 - Highscore 35" hidden><img class="simulation-board" src="reports/games/daily-5.gif?run=428a0dac-d7eb-46c3-9074-0f27d9db6bda&amp;renderer=6&amp;score=35" alt="Animated game from simulation 2137"></figure></div>
+<figure class="daily-game" aria-label="Simulation #2138 - Highscore 43" hidden><img class="simulation-board" src="reports/games/daily-4.gif?run=5da56eb3-d485-462c-8668-1ab4e1df7bf8&amp;renderer=6&amp;score=43" alt="Animated game from simulation 2138"></figure>
+<figure class="daily-game" aria-label="Simulation #2139 - Highscore 43" hidden><img class="simulation-board" src="reports/games/daily-5.gif?run=04fd3d22-044c-41ea-aee6-18521437082d&amp;renderer=6&amp;score=43" alt="Animated game from simulation 2139"></figure>
+<figure class="daily-game" aria-label="Simulation #2134 - Highscore 37" hidden><img class="simulation-board" src="reports/games/daily-6.gif?run=71a070cb-4d8c-44f1-83f4-0c5391b3eb75&amp;renderer=6&amp;score=37" alt="Animated game from simulation 2134"></figure>
+<figure class="daily-game" aria-label="Simulation #2137 - Highscore 35" hidden><img class="simulation-board" src="reports/games/daily-7.gif?run=428a0dac-d7eb-46c3-9074-0f27d9db6bda&amp;renderer=6&amp;score=35" alt="Animated game from simulation 2137"></figure>
+<figure class="daily-game" aria-label="Simulation #2140 - Highscore 12" hidden><img class="simulation-board" src="reports/games/daily-8.gif?run=923f8b2b-9e06-49af-b58b-7822dee03376&amp;renderer=6&amp;score=12" alt="Animated game from simulation 2140"></figure></div>
         <nav class="game-navigation" aria-label="Daily games">
           <button type="button" data-game-step="-1" aria-label="Previous game" disabled>&#8592;</button>
-          <span data-game-position aria-live="polite">1 / 5</span>
+          <span data-game-position aria-live="polite">1 / 8</span>
           <button type="button" data-game-step="1" aria-label="Next game" disabled>&#8594;</button>
         </nav>
         <section class="daily-progress" aria-label="Daily configuration score progress">
-          <img class="progress-chart" src="reports/games/daily-progress.gif?v=ccc64be3904e6f55" alt="Animated top ten configuration scores, lowest to highest, for 2026-10-13; 4 observed half-hour updates.">
+          <img class="progress-chart" src="reports/games/daily-progress.gif?v=b0375bf2c0888d5c" alt="Animated top ten configuration scores, lowest to highest, for 2026-10-13; 5 observed half-hour updates.">
         </section>
       </section>
     </div>
   </div>
-  <p class="experiment-footer">Last Updated: <!-- last-updated -->2026-10-12 22:00:18 EDT (-0400)<!-- /last-updated --><br>
+  <p class="experiment-footer">Last Updated: <!-- last-updated -->2026-10-12 22:30:26 EDT (-0400)<!-- /last-updated --><br>
   Visits: <span data-mycount-counter>…</span></p>
 </section>
 <script src="reports/daily-games.js" defer></script>
