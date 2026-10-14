@@ -42,10 +42,10 @@ classes: wide
           <li>Hostname: neuromancer</li>
           <li>All-Time Highscore: 58</li>
           <li>Current Highscore: 46</li>
-          <li>Completed Experiments: 293</li>
-          <li>Simulations Submitted: 2,200</li>
-          <li>Games Played: 3,296,154</li>
-          <li>Moves Made: 531,682,648</li>
+          <li>Completed Experiments: 294</li>
+          <li>Simulations Submitted: 2,201</li>
+          <li>Games Played: 3,298,315</li>
+          <li>Moves Made: 532,017,209</li>
         </ul>
       </section>
       <section class="experiment-reports" aria-labelledby="reports-title">
@@ -71,19 +71,20 @@ classes: wide
 <figure class="daily-game" aria-label="Simulation #2199 - Highscore 41" hidden><img class="simulation-board" src="reports/games/daily-5.gif?run=2353e35e-0d4c-4de2-9b4c-9ee58c94d31f&amp;renderer=6&amp;score=41" alt="Animated game from simulation 2199"></figure>
 <figure class="daily-game" aria-label="Simulation #2200 - Highscore 41" hidden><img class="simulation-board" src="reports/games/daily-6.gif?run=885e296e-a730-452a-a499-f256b8b57719&amp;renderer=6&amp;score=41" alt="Animated game from simulation 2200"></figure>
 <figure class="daily-game" aria-label="Simulation #2197 - Highscore 40" hidden><img class="simulation-board" src="reports/games/daily-7.gif?run=faa125a2-07c8-4580-ae69-7ff586d5fb22&amp;renderer=6&amp;score=40" alt="Animated game from simulation 2197"></figure>
-<figure class="daily-game" aria-label="Simulation #2195 - Highscore 2" hidden><img class="simulation-board" src="reports/games/daily-8.gif?run=3aa6ad20-528e-4f86-a1f1-35ddad541610&amp;renderer=6&amp;score=2" alt="Animated game from simulation 2195"></figure></div>
+<figure class="daily-game" aria-label="Simulation #2201 - Highscore 40" hidden><img class="simulation-board" src="reports/games/daily-8.gif?run=4eb096b1-c574-45b6-8906-cb62ea32fc86&amp;renderer=6&amp;score=40" alt="Animated game from simulation 2201"></figure>
+<figure class="daily-game" aria-label="Simulation #2195 - Highscore 2" hidden><img class="simulation-board" src="reports/games/daily-9.gif?run=3aa6ad20-528e-4f86-a1f1-35ddad541610&amp;renderer=6&amp;score=2" alt="Animated game from simulation 2195"></figure></div>
         <nav class="game-navigation" aria-label="Daily games">
           <button type="button" data-game-step="-1" aria-label="Previous game" disabled>&#8592;</button>
-          <span data-game-position aria-live="polite">1 / 8</span>
+          <span data-game-position aria-live="polite">1 / 9</span>
           <button type="button" data-game-step="1" aria-label="Next game" disabled>&#8594;</button>
         </nav>
         <section class="daily-progress" aria-label="Daily configuration score progress">
-          <img class="progress-chart" src="reports/games/daily-progress.gif?v=25f7b1a4c1b3f262" alt="Animated top ten configuration scores, lowest to highest, for 2026-10-14; 7 observed half-hour updates.">
+          <img class="progress-chart" src="reports/games/daily-progress.gif?v=7bf555f1c2ab3dda" alt="Animated top ten configuration scores, lowest to highest, for 2026-10-14; 8 observed half-hour updates.">
         </section>
       </section>
     </div>
   </div>
-  <p class="experiment-footer">Last Updated: <!-- last-updated -->2026-10-13 23:30:19 EDT (-0400)<!-- /last-updated --><br>
+  <p class="experiment-footer">Last Updated: <!-- last-updated -->2026-10-14 00:00:20 EDT (-0400)<!-- /last-updated --><br>
   Visits: <span data-mycount-counter>…</span></p>
 </section>
 <script src="reports/daily-games.js" defer></script>
