@@ -498,6 +498,52 @@
           "high_score": 40
         }
       ]
+    },
+    {
+      "slot": 14,
+      "observed_at": "2026-10-15T07:30:13+00:00",
+      "configurations": [
+        {
+          "id": 2256,
+          "high_score": 51
+        },
+        {
+          "id": 2258,
+          "high_score": 47
+        },
+        {
+          "id": 2266,
+          "high_score": 47
+        },
+        {
+          "id": 2268,
+          "high_score": 44
+        },
+        {
+          "id": 2270,
+          "high_score": 44
+        },
+        {
+          "id": 2274,
+          "high_score": 43
+        },
+        {
+          "id": 2261,
+          "high_score": 42
+        },
+        {
+          "id": 2264,
+          "high_score": 42
+        },
+        {
+          "id": 2260,
+          "high_score": 41
+        },
+        {
+          "id": 2265,
+          "high_score": 41
+        }
+      ]
     }
   ]
 }
