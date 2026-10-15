@@ -43,9 +43,9 @@ classes: wide
           <li>All-Time Highscore: 58</li>
           <li>Current Highscore: 51</li>
           <li>Completed Experiments: 303</li>
-          <li>Simulations Submitted: 2,269</li>
-          <li>Games Played: 3,399,800</li>
-          <li>Moves Made: 549,700,459</li>
+          <li>Simulations Submitted: 2,270</li>
+          <li>Games Played: 3,401,614</li>
+          <li>Moves Made: 550,060,913</li>
         </ul>
       </section>
       <section class="experiment-reports" aria-labelledby="reports-title">
@@ -68,24 +68,24 @@ classes: wide
 <figure class="daily-game" aria-label="Simulation #2258 - Highscore 47" hidden><img class="simulation-board" src="reports/games/daily-2.gif?run=8b87066a-7149-40de-af03-c72792ac7449&amp;renderer=6&amp;score=47" alt="Animated game from simulation 2258"></figure>
 <figure class="daily-game" aria-label="Simulation #2266 - Highscore 47" hidden><img class="simulation-board" src="reports/games/daily-3.gif?run=696fd297-c5e7-43b3-b270-f67d05d706d4&amp;renderer=6&amp;score=47" alt="Animated game from simulation 2266"></figure>
 <figure class="daily-game" aria-label="Simulation #2268 - Highscore 44" hidden><img class="simulation-board" src="reports/games/daily-4.gif?run=ec3a9106-d4b8-4e0a-b6ae-ca73c9623b56&amp;renderer=6&amp;score=44" alt="Animated game from simulation 2268"></figure>
-<figure class="daily-game" aria-label="Simulation #2261 - Highscore 42" hidden><img class="simulation-board" src="reports/games/daily-5.gif?run=c0c543b2-57d2-491e-b2b1-b1d1dfa5e135&amp;renderer=6&amp;score=42" alt="Animated game from simulation 2261"></figure>
-<figure class="daily-game" aria-label="Simulation #2264 - Highscore 42" hidden><img class="simulation-board" src="reports/games/daily-6.gif?run=83d34d85-cb2e-4929-a921-cdf46e4cbe34&amp;renderer=6&amp;score=42" alt="Animated game from simulation 2264"></figure>
-<figure class="daily-game" aria-label="Simulation #2260 - Highscore 41" hidden><img class="simulation-board" src="reports/games/daily-7.gif?run=a98c179b-9072-438c-9dfb-09a9b0d2f88d&amp;renderer=6&amp;score=41" alt="Animated game from simulation 2260"></figure>
-<figure class="daily-game" aria-label="Simulation #2265 - Highscore 41" hidden><img class="simulation-board" src="reports/games/daily-8.gif?run=cbc5c103-57cd-4f88-9182-0f17c09ecda2&amp;renderer=6&amp;score=41" alt="Animated game from simulation 2265"></figure>
-<figure class="daily-game" aria-label="Simulation #2259 - Highscore 40" hidden><img class="simulation-board" src="reports/games/daily-9.gif?run=a0249f0f-79b0-446b-92f2-012809272ebd&amp;renderer=6&amp;score=40" alt="Animated game from simulation 2259"></figure>
-<figure class="daily-game" aria-label="Simulation #2257 - Highscore 39" hidden><img class="simulation-board" src="reports/games/daily-10.gif?run=2fd0810a-49b7-4092-8ef9-a3a0b17ff7c0&amp;renderer=6&amp;score=39" alt="Animated game from simulation 2257"></figure></div>
+<figure class="daily-game" aria-label="Simulation #2270 - Highscore 44" hidden><img class="simulation-board" src="reports/games/daily-5.gif?run=0329da66-a40d-4418-bb84-0d7f93940148&amp;renderer=6&amp;score=44" alt="Animated game from simulation 2270"></figure>
+<figure class="daily-game" aria-label="Simulation #2261 - Highscore 42" hidden><img class="simulation-board" src="reports/games/daily-6.gif?run=c0c543b2-57d2-491e-b2b1-b1d1dfa5e135&amp;renderer=6&amp;score=42" alt="Animated game from simulation 2261"></figure>
+<figure class="daily-game" aria-label="Simulation #2264 - Highscore 42" hidden><img class="simulation-board" src="reports/games/daily-7.gif?run=83d34d85-cb2e-4929-a921-cdf46e4cbe34&amp;renderer=6&amp;score=42" alt="Animated game from simulation 2264"></figure>
+<figure class="daily-game" aria-label="Simulation #2260 - Highscore 41" hidden><img class="simulation-board" src="reports/games/daily-8.gif?run=a98c179b-9072-438c-9dfb-09a9b0d2f88d&amp;renderer=6&amp;score=41" alt="Animated game from simulation 2260"></figure>
+<figure class="daily-game" aria-label="Simulation #2265 - Highscore 41" hidden><img class="simulation-board" src="reports/games/daily-9.gif?run=cbc5c103-57cd-4f88-9182-0f17c09ecda2&amp;renderer=6&amp;score=41" alt="Animated game from simulation 2265"></figure>
+<figure class="daily-game" aria-label="Simulation #2259 - Highscore 40" hidden><img class="simulation-board" src="reports/games/daily-10.gif?run=a0249f0f-79b0-446b-92f2-012809272ebd&amp;renderer=6&amp;score=40" alt="Animated game from simulation 2259"></figure></div>
         <nav class="game-navigation" aria-label="Daily games">
           <button type="button" data-game-step="-1" aria-label="Previous game" disabled>&#8592;</button>
           <span data-game-position aria-live="polite">1 / 10</span>
           <button type="button" data-game-step="1" aria-label="Next game" disabled>&#8594;</button>
         </nav>
         <section class="daily-progress" aria-label="Daily configuration score progress">
-          <img class="progress-chart" src="reports/games/daily-progress.gif?v=9507cd1b2cf301f3" alt="Animated top ten configuration scores, lowest to highest, for 2026-10-15; 11 observed half-hour updates.">
+          <img class="progress-chart" src="reports/games/daily-progress.gif?v=24d0a9fb35dbc3a9" alt="Animated top ten configuration scores, lowest to highest, for 2026-10-15; 12 observed half-hour updates.">
         </section>
       </section>
     </div>
   </div>
-  <p class="experiment-footer">Last Updated: <!-- last-updated -->2026-10-15 01:30:14 EDT (-0400)<!-- /last-updated --><br>
+  <p class="experiment-footer">Last Updated: <!-- last-updated -->2026-10-15 02:00:18 EDT (-0400)<!-- /last-updated --><br>
   Visits: <span data-mycount-counter>…</span></p>
 </section>
 <script src="reports/daily-games.js" defer></script>
