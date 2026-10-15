@@ -12,6 +12,20 @@
           "high_score": 51
         }
       ]
+    },
+    {
+      "slot": 1,
+      "observed_at": "2026-10-15T01:00:14+00:00",
+      "configurations": [
+        {
+          "id": 2256,
+          "high_score": 51
+        },
+        {
+          "id": 2257,
+          "high_score": 39
+        }
+      ]
     }
   ]
 }
