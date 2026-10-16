@@ -40,6 +40,11 @@
       "high_score": 44
     },
     {
+      "id": 2367,
+      "run_id": "f6a7f47f-50d4-41d1-826e-12375595ec7c",
+      "high_score": 44
+    },
+    {
       "id": 2337,
       "run_id": "d310451e-1b7b-4ccf-af59-3e4df5093b73",
       "high_score": 43
@@ -47,11 +52,6 @@
     {
       "id": 2352,
       "run_id": "be4a9285-f7c6-4087-9b00-8ab854671250",
-      "high_score": 43
-    },
-    {
-      "id": 2363,
-      "run_id": "8792d16d-1bf9-412f-9dd1-2e2fc5c93576",
       "high_score": 43
     }
   ]
