@@ -44,8 +44,8 @@ classes: wide
           <li>Current Highscore: 54</li>
           <li>Completed Experiments: 317</li>
           <li>Simulations Submitted: 2,376</li>
-          <li>Games Played: 3,559,345</li>
-          <li>Moves Made: 575,830,247</li>
+          <li>Games Played: 3,560,754</li>
+          <li>Moves Made: 576,071,749</li>
         </ul>
       </section>
       <section class="experiment-reports" aria-labelledby="reports-title">
@@ -64,19 +64,20 @@ classes: wide
     <div class="experiment-visualizations">
       <section class="daily-games" aria-labelledby="daily-title">
         <h3 id="daily-title">Top 10 Daily Games</h3>
-        <div class="daily-viewer"><figure class="daily-game" aria-label="Simulation #2376 - Highscore 36"><img class="simulation-board" src="reports/games/daily-1.gif?run=43433d45-68f6-4815-a514-505d9e9c700b&amp;renderer=6&amp;score=36" alt="Animated game from simulation 2376"></figure></div>
+        <div class="daily-viewer"><figure class="daily-game" aria-label="Simulation #2377 - Highscore 38"><img class="simulation-board" src="reports/games/daily-1.gif?run=a77dfb26-8983-4d5e-8b80-c65adc994d9b&amp;renderer=6&amp;score=38" alt="Animated game from simulation 2377"></figure>
+<figure class="daily-game" aria-label="Simulation #2376 - Highscore 36" hidden><img class="simulation-board" src="reports/games/daily-2.gif?run=43433d45-68f6-4815-a514-505d9e9c700b&amp;renderer=6&amp;score=36" alt="Animated game from simulation 2376"></figure></div>
         <nav class="game-navigation" aria-label="Daily games">
           <button type="button" data-game-step="-1" aria-label="Previous game" disabled>&#8592;</button>
-          <span data-game-position aria-live="polite">1 / 1</span>
+          <span data-game-position aria-live="polite">1 / 2</span>
           <button type="button" data-game-step="1" aria-label="Next game" disabled>&#8594;</button>
         </nav>
         <section class="daily-progress" aria-label="Daily configuration score progress">
-          <img class="progress-chart" src="reports/games/daily-progress.gif?v=8331b74526849568" alt="Animated top ten configuration scores, lowest to highest, for 2026-10-17; 1 observed half-hour updates.">
+          <img class="progress-chart" src="reports/games/daily-progress.gif?v=2b73d87759bca860" alt="Animated top ten configuration scores, lowest to highest, for 2026-10-17; 2 observed half-hour updates.">
         </section>
       </section>
     </div>
   </div>
-  <p class="experiment-footer">Last Updated: <!-- last-updated -->2026-10-16 20:30:20 EDT (-0400)<!-- /last-updated --><br>
+  <p class="experiment-footer">Last Updated: <!-- last-updated -->2026-10-16 21:00:39 EDT (-0400)<!-- /last-updated --><br>
   Visits: <span data-mycount-counter>…</span></p>
 </section>
 <script src="reports/daily-games.js" defer></script>
