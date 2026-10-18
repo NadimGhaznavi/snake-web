@@ -1,58 +1,7 @@
 {
   "version": 1,
-  "day": "2026-10-17",
+  "day": "2026-10-18",
   "renderer": 7,
   "duration_ms": 75,
-  "games": [
-    {
-      "id": 2403,
-      "run_id": "0404bda0-86f2-4e76-b558-1f2155ffbbb7",
-      "high_score": 48
-    },
-    {
-      "id": 2408,
-      "run_id": "81f90a47-b569-4029-993b-297d5a807507",
-      "high_score": 48
-    },
-    {
-      "id": 2414,
-      "run_id": "e006318d-ce47-4ead-880f-875026dee11b",
-      "high_score": 48
-    },
-    {
-      "id": 2378,
-      "run_id": "eba08cd5-3427-4c7d-8049-f332c3f9859a",
-      "high_score": 46
-    },
-    {
-      "id": 2384,
-      "run_id": "d73bb1f1-35fc-412c-9142-5b5f3cd783c8",
-      "high_score": 46
-    },
-    {
-      "id": 2385,
-      "run_id": "e6a5085a-cf13-4895-b5d3-497008619972",
-      "high_score": 45
-    },
-    {
-      "id": 2391,
-      "run_id": "19498d7b-eb87-42f0-a60a-a20dad79d53f",
-      "high_score": 44
-    },
-    {
-      "id": 2422,
-      "run_id": "bfe4b41d-cc34-4d18-ae41-4e9cfad7bec1",
-      "high_score": 44
-    },
-    {
-      "id": 2388,
-      "run_id": "5a837d7b-12af-4627-9824-95d9a0f409e3",
-      "high_score": 43
-    },
-    {
-      "id": 2390,
-      "run_id": "92d4f629-5888-414f-b776-6d58ca13c3d3",
-      "high_score": 43
-    }
-  ]
+  "games": []
 }
