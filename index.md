@@ -43,9 +43,9 @@ classes: wide
           <li>All-Time Highscore: 58</li>
           <li>Current Highscore: 43</li>
           <li>Completed Experiments: 344</li>
-          <li>Simulations Submitted: 2,567</li>
-          <li>Games Played: 3,845,863</li>
-          <li>Moves Made: 610,188,219</li>
+          <li>Simulations Submitted: 2,568</li>
+          <li>Games Played: 3,848,017</li>
+          <li>Moves Made: 610,516,779</li>
         </ul>
       </section>
       <section class="experiment-reports" aria-labelledby="reports-title">
@@ -73,19 +73,19 @@ classes: wide
 <figure class="daily-game" aria-label="Simulation #2556 - Highscore 42" hidden><img class="simulation-board" src="reports/games/daily-7.gif?run=233c26fb-e9e2-4094-894a-e7a36cd90ef0&amp;renderer=7&amp;score=42" alt="Animated game from simulation 2556"></figure>
 <figure class="daily-game" aria-label="Simulation #2560 - Highscore 42" hidden><img class="simulation-board" src="reports/games/daily-8.gif?run=11ba826f-15c9-40f6-b692-ae4c11f790b5&amp;renderer=7&amp;score=42" alt="Animated game from simulation 2560"></figure>
 <figure class="daily-game" aria-label="Simulation #2565 - Highscore 42" hidden><img class="simulation-board" src="reports/games/daily-9.gif?run=d4a9a6dd-a8e9-4a95-9113-45c1fbda3ecd&amp;renderer=7&amp;score=42" alt="Animated game from simulation 2565"></figure>
-<figure class="daily-game" aria-label="Simulation #2522 - Highscore 41" hidden><img class="simulation-board" src="reports/games/daily-10.gif?run=0283ae69-b4b1-4d2a-82f6-6917944613c7&amp;renderer=7&amp;score=41" alt="Animated game from simulation 2522"></figure></div>
+<figure class="daily-game" aria-label="Simulation #2568 - Highscore 42" hidden><img class="simulation-board" src="reports/games/daily-10.gif?run=8459b22f-0c4a-482a-89bc-a94e7f2fc849&amp;renderer=7&amp;score=42" alt="Animated game from simulation 2568"></figure></div>
         <nav class="game-navigation" aria-label="Daily games">
           <button type="button" data-game-step="-1" aria-label="Previous game" disabled>&#8592;</button>
           <span data-game-position aria-live="polite">1 / 10</span>
           <button type="button" data-game-step="1" aria-label="Next game" disabled>&#8594;</button>
         </nav>
         <section class="daily-progress" aria-label="Daily configuration score progress">
-          <img class="progress-chart" src="reports/games/daily-progress.gif?v=5e81e62eff98cb97" alt="Animated top ten configuration scores, lowest to highest, for 2026-10-19; 33 observed half-hour updates.">
+          <img class="progress-chart" src="reports/games/daily-progress.gif?v=a11233881348a4a1" alt="Animated top ten configuration scores, lowest to highest, for 2026-10-19; 34 observed half-hour updates.">
         </section>
       </section>
     </div>
   </div>
-  <p class="experiment-footer">Last Updated: <!-- last-updated -->2026-10-19 12:30:22 EDT (-0400)<!-- /last-updated --><br>
+  <p class="experiment-footer">Last Updated: <!-- last-updated -->2026-10-19 13:00:23 EDT (-0400)<!-- /last-updated --><br>
   Visits: <span data-mycount-counter>…</span></p>
 </section>
 <script src="reports/daily-games.js" defer></script>
