@@ -20,6 +20,11 @@
       "high_score": 43
     },
     {
+      "id": 2603,
+      "run_id": "11c88786-6fbe-478d-adf4-6ba38641dd46",
+      "high_score": 43
+    },
+    {
       "id": 2596,
       "run_id": "d9a7ef80-7644-405a-8dfa-23c88c816b00",
       "high_score": 42
@@ -35,24 +40,19 @@
       "high_score": 41
     },
     {
+      "id": 2602,
+      "run_id": "3d721c03-857c-4cd2-88f1-b48c5aa3ac74",
+      "high_score": 41
+    },
+    {
+      "id": 2604,
+      "run_id": "7b456c1f-4047-4e3a-a437-a34e59c12fb7",
+      "high_score": 41
+    },
+    {
       "id": 2592,
       "run_id": "c02e22a9-3b2b-4d84-ad17-75153a8efb4a",
       "high_score": 40
-    },
-    {
-      "id": 2595,
-      "run_id": "138aa34e-7262-483c-8b1b-943142340146",
-      "high_score": 39
-    },
-    {
-      "id": 2601,
-      "run_id": "51d760cc-e8fb-4578-8b55-fa18373f0249",
-      "high_score": 38
-    },
-    {
-      "id": 2599,
-      "run_id": "4d1c5e2b-3226-4c69-8374-b9624cefab57",
-      "high_score": 36
     }
   ]
 }
