@@ -43,9 +43,9 @@ classes: wide
           <li>All-Time Highscore: 58</li>
           <li>Current Highscore: 44</li>
           <li>Completed Experiments: 347</li>
-          <li>Simulations Submitted: 2,589</li>
-          <li>Games Played: 3,879,761</li>
-          <li>Moves Made: 614,859,521</li>
+          <li>Simulations Submitted: 2,590</li>
+          <li>Games Played: 3,881,649</li>
+          <li>Moves Made: 615,172,949</li>
         </ul>
       </section>
       <section class="experiment-reports" aria-labelledby="reports-title">
@@ -64,19 +64,19 @@ classes: wide
     <div class="experiment-visualizations">
       <section class="daily-games" aria-labelledby="daily-title">
         <h3 id="daily-title">Top 10 Daily Games</h3>
-        <div class="daily-viewer"></div>
+        <div class="daily-viewer"><figure class="daily-game" aria-label="Simulation #2590 - Highscore 43"><img class="simulation-board" src="reports/games/daily-1.gif?run=6a376aaf-79ee-4016-97d2-a4550fbfbde9&amp;renderer=7&amp;score=43" alt="Animated game from simulation 2590"></figure></div>
         <nav class="game-navigation" aria-label="Daily games">
           <button type="button" data-game-step="-1" aria-label="Previous game" disabled>&#8592;</button>
-          <span data-game-position aria-live="polite"></span>
+          <span data-game-position aria-live="polite">1 / 1</span>
           <button type="button" data-game-step="1" aria-label="Next game" disabled>&#8594;</button>
         </nav>
         <section class="daily-progress" aria-label="Daily configuration score progress">
-          <img class="progress-chart" src="reports/games/daily-progress.gif?v=07db7892a33d9664" alt="Animated top ten configuration scores, lowest to highest, for 2026-10-19; 48 observed half-hour updates.">
+          <img class="progress-chart" src="reports/games/daily-progress.gif?v=eb314d6d9deb9c73" alt="Animated top ten configuration scores, lowest to highest, for 2026-10-20; 1 observed half-hour updates.">
         </section>
       </section>
     </div>
   </div>
-  <p class="experiment-footer">Last Updated: <!-- last-updated -->2026-10-19 20:00:17 EDT (-0400)<!-- /last-updated --><br>
+  <p class="experiment-footer">Last Updated: <!-- last-updated -->2026-10-19 20:30:20 EDT (-0400)<!-- /last-updated --><br>
   Visits: <span data-mycount-counter>…</span></p>
 </section>
 <script src="reports/daily-games.js" defer></script>
