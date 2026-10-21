@@ -2813,3 +2813,4 @@ Let me choose initial=0.97, decay=0.95. This has the same initial as the golden 
 
 I'm considering the trade-offs between exploration and performance. Lower decay suggests a more rapid exploration-to-exploitation transition, which could potentially yield better results on untested configurations. The untested pair with initial=0.97 and decay=0.95 seems promising for investigating potential improvements.
 "
+45912,2026-10-21 19:17:42.027060,772f18ea-a8c8-41dc-956c-ed8baaf1bf56,40,,,
