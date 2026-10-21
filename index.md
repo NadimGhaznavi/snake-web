@@ -43,9 +43,9 @@ classes: wide
           <li>All-Time Highscore: 58</li>
           <li>Current Highscore: 52</li>
           <li>Completed Experiments: 363</li>
-          <li>Simulations Submitted: 2,698</li>
-          <li>Games Played: 4,042,290</li>
-          <li>Moves Made: 639,495,911</li>
+          <li>Simulations Submitted: 2,699</li>
+          <li>Games Played: 4,044,765</li>
+          <li>Moves Made: 639,874,898</li>
         </ul>
       </section>
       <section class="experiment-reports" aria-labelledby="reports-title">
@@ -80,12 +80,12 @@ classes: wide
           <button type="button" data-game-step="1" aria-label="Next game" disabled>&#8594;</button>
         </nav>
         <section class="daily-progress" aria-label="Daily configuration score progress">
-          <img class="progress-chart" src="reports/games/daily-progress.gif?v=ed483278b8f6ac22" alt="Animated top ten configuration scores, lowest to highest, for 2026-10-21; 28 observed half-hour updates.">
+          <img class="progress-chart" src="reports/games/daily-progress.gif?v=e5543b2031a8d264" alt="Animated top ten configuration scores, lowest to highest, for 2026-10-21; 29 observed half-hour updates.">
         </section>
       </section>
     </div>
   </div>
-  <p class="experiment-footer">Last Updated: <!-- last-updated -->2026-10-21 10:00:18 EDT (-0400)<!-- /last-updated --><br>
+  <p class="experiment-footer">Last Updated: <!-- last-updated -->2026-10-21 10:30:17 EDT (-0400)<!-- /last-updated --><br>
   Visits: <span data-mycount-counter>…</span></p>
 </section>
 <script src="reports/daily-games.js" defer></script>
