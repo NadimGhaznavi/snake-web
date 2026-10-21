@@ -3,5 +3,16 @@
   "day": "2026-10-21",
   "renderer": 7,
   "duration_ms": 75,
-  "games": []
+  "games": [
+    {
+      "id": 2658,
+      "run_id": "f6c22e8b-b8bb-4f91-b77d-cd7ac0caa9e4",
+      "high_score": 43
+    },
+    {
+      "id": 2659,
+      "run_id": "0f0baf7a-0c5b-4897-989c-d5f260eaec2b",
+      "high_score": 39
+    }
+  ]
 }
