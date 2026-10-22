@@ -25,6 +25,11 @@
       "high_score": 42
     },
     {
+      "id": 2738,
+      "run_id": "c1f3e028-c0bc-4f56-9b3a-bb29e222b8e1",
+      "high_score": 42
+    },
+    {
       "id": 2736,
       "run_id": "51a69361-3f37-4509-8092-8dd54d064aab",
       "high_score": 41
@@ -32,6 +37,11 @@
     {
       "id": 2733,
       "run_id": "d712f6f3-cd6f-444c-949a-4845e4bbeca8",
+      "high_score": 37
+    },
+    {
+      "id": 2739,
+      "run_id": "a8ba0d5e-0ad4-43ec-93a7-2301e2204ffe",
       "high_score": 37
     },
     {
@@ -43,16 +53,6 @@
       "id": 2732,
       "run_id": "c73760fe-b412-4e83-909c-f7a6274d4da9",
       "high_score": 33
-    },
-    {
-      "id": 2729,
-      "run_id": "827ca51d-5ea1-4f82-8b71-976102eefb48",
-      "high_score": 2
-    },
-    {
-      "id": 2728,
-      "run_id": "10c969cc-0f6b-499c-a187-d86c3a63b137",
-      "high_score": 1
     }
   ]
 }
