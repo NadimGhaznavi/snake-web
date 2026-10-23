@@ -41,11 +41,11 @@ classes: wide
         <ul class="experiment-metrics">
           <li>Hostname: neuromancer</li>
           <li>All-Time Highscore: 58</li>
-          <li>Current Highscore: 46</li>
+          <li>Current Highscore: 52</li>
           <li>Completed Experiments: 374</li>
-          <li>Simulations Submitted: 2,791</li>
-          <li>Games Played: 4,181,927</li>
-          <li>Moves Made: 661,318,990</li>
+          <li>Simulations Submitted: 2,792</li>
+          <li>Games Played: 4,183,743</li>
+          <li>Moves Made: 661,652,435</li>
         </ul>
       </section>
       <section class="experiment-reports" aria-labelledby="reports-title">
@@ -64,19 +64,19 @@ classes: wide
     <div class="experiment-visualizations">
       <section class="daily-games" aria-labelledby="daily-title">
         <h3 id="daily-title">Top 10 Daily Games</h3>
-        <div class="daily-viewer"></div>
+        <div class="daily-viewer"><figure class="daily-game" aria-label="Simulation #2792 - Highscore 52"><img class="simulation-board" src="reports/games/daily-1.gif?run=b3cd4ea3-e354-48da-afef-3895e663f4d9&amp;renderer=7&amp;score=52" alt="Animated game from simulation 2792"></figure></div>
         <nav class="game-navigation" aria-label="Daily games">
           <button type="button" data-game-step="-1" aria-label="Previous game" disabled>&#8592;</button>
-          <span data-game-position aria-live="polite"></span>
+          <span data-game-position aria-live="polite">1 / 1</span>
           <button type="button" data-game-step="1" aria-label="Next game" disabled>&#8594;</button>
         </nav>
         <section class="daily-progress" aria-label="Daily configuration score progress">
-          <img class="progress-chart" src="reports/games/daily-progress.gif?v=51a12f796a7e6217" alt="Animated top ten configuration scores, lowest to highest, for 2026-10-22; 48 observed half-hour updates.">
+          <img class="progress-chart" src="reports/games/daily-progress.gif?v=2a77de550ba24fb0" alt="Animated top ten configuration scores, lowest to highest, for 2026-10-23; 1 observed half-hour updates.">
         </section>
       </section>
     </div>
   </div>
-  <p class="experiment-footer">Last Updated: <!-- last-updated -->2026-10-22 20:00:18 EDT (-0400)<!-- /last-updated --><br>
+  <p class="experiment-footer">Last Updated: <!-- last-updated -->2026-10-22 20:30:23 EDT (-0400)<!-- /last-updated --><br>
   Visits: <span data-mycount-counter>…</span></p>
 </section>
 <script src="reports/daily-games.js" defer></script>
