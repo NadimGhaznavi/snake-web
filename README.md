@@ -1,4 +1,5 @@
-# Snake Web
+# Snake-Web
 
-Website showing [Ax3l](https://ax3l.osoyalce.com) experiment status.
+Project information is on [https://snakewebserver.osoyalce.com](https://snakewebserver.osoyalce.com).
 
+If you like this project, please give it a star (top right corner)! :)
