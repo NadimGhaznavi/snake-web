@@ -16,6 +16,7 @@ classes: wide
 .ax3l-live button { min-width: 44px; min-height: 44px; padding: .25rem .75rem; border: 1px solid #40566e; background: #172332; color: #79b8f3; font: inherit; cursor: pointer; }
 .ax3l-live button:disabled { color: #66717e; cursor: default; }
 .ax3l-live button:focus-visible { outline: 2px solid #79b8f3; outline-offset: 3px; }
+.ax3l-live .progress-chart { border: 1px solid #40566e; }
 .ax3l-live .live-status { color: #a7b8cb; }
 </style>
 
@@ -30,7 +31,8 @@ classes: wide
     <span data-game-position aria-live="polite">0 / 0</span>
     <button type="button" data-game-step="1" aria-label="Next game" disabled>&#8594;</button>
   </nav>
+  <img class="progress-chart" data-live-progress width="800" height="438" alt="Animated top ten daily simulation scores, lowest to highest, at observed half-hour updates" hidden>
   <img data-live-distribution width="800" height="480" alt="Cumulative score distribution every 500 simulations, followed by all simulations" hidden>
-  <noscript>Enable JavaScript to view the live games and score distribution.</noscript>
+  <noscript>Enable JavaScript to view the live games, daily scores, and score distribution.</noscript>
 </section>
 <script src="{{ '/assets/js/ax3l-live.js' | relative_url }}" defer></script>

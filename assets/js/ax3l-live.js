@@ -7,6 +7,7 @@
   const filenames = ['game-one.gif', 'game-two.gif', 'game-three.gif', 'game-four.gif', 'game-five.gif'];
   const game = root.querySelector('[data-live-game]');
   const histogram = root.querySelector('[data-live-distribution]');
+  const progress = root.querySelector('[data-live-progress]');
   const status = root.querySelector('[data-live-status]');
   const buttons = Array.from(root.querySelectorAll('[data-game-step]'));
   let games = [];
@@ -33,7 +34,7 @@
     selected = (selected + Number(button.dataset.gameStep) + games.length) % games.length;
     showGame();
   }));
-  [game, histogram].forEach(image => image.addEventListener('error', () => {
+  [game, progress, histogram].forEach(image => image.addEventListener('error', () => {
     image.hidden = true;
     status.textContent = 'An image is unavailable. Reload to retry.';
   }));
@@ -46,6 +47,7 @@
       if (!response.ok) throw new Error('Live metadata unavailable');
       const data = await response.json();
       if (data.version !== 1 || typeof data.updated !== 'string'
+          || (data.daily_progress !== undefined && typeof data.daily_progress !== 'boolean')
           || !Array.isArray(data.games) || data.games.length > 5
           || !data.games.every(row => Number.isSafeInteger(row.id) && row.id > 0
             && Number.isSafeInteger(row.high_score) && row.high_score >= 0)) {
@@ -54,6 +56,10 @@
       games = data.games;
       root.querySelector('[data-live-updated]').textContent = data.updated;
       showGame();
+      if (data.daily_progress === true) {
+        progress.src = imageURL('daily-progress.gif');
+        progress.hidden = false;
+      }
       histogram.src = imageURL('score-distribution.gif');
       histogram.hidden = false;
     } catch (error) {
