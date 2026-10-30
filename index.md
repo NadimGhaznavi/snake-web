@@ -36,3 +36,4 @@ classes: wide
   <noscript>Enable JavaScript to view the live games, daily scores, and score distribution.</noscript>
 </section>
 <script src="{{ '/assets/js/ax3l-live.js' | relative_url }}" defer></script>
+
