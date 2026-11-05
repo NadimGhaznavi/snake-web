@@ -94,6 +94,7 @@ classes: "wide ax3l-home"
         <section class="panel" aria-labelledby="experiment-title">
           <h3 id="experiment-title">The experiment</h3>
           <p>This site shows the results from the <a href="https://ax3l.osoyalce.com">Ax3l Experiment</a>. The Ax3l experiment consists of a small, local AI (Qwen 3.5 4B) that tunes the performance settings of another, very small AI that is then trained to play the <a href="https://snakelabserver.osoyalce.com">Snake Game</a>.</p>
+          <p>The experiment has been running since September 15, 2026.</p>
           <p>Brought to you by the folks at <a href="https://www.osoyalce.com">Bear & Moose</a>.</p>
         </section>
         <section class="panel" aria-labelledby="status-title">
