@@ -10,13 +10,13 @@ classes: wide
 .ax3l-live * { box-sizing: border-box; }
 .ax3l-live h1 { margin: 0; border: 0; font: bold 1.8em/1.3 "Courier New", Courier, monospace; }
 .ax3l-live p { margin: .5rem 0; }
+.ax3l-live .intro { text-align: left; }
 .ax3l-live [hidden] { display: none !important; }
-.ax3l-live img { display: block; max-width: 100%; height: auto; margin: 1rem auto 0; }
+.ax3l-live img { display: block; max-width: 100%; height: auto; margin: 1rem auto 0; border: 1px solid #40566e; }
 .ax3l-live .game-navigation { display: flex; justify-content: center; align-items: center; gap: 1rem; margin: .75rem 0 1.5rem; }
 .ax3l-live button { min-width: 44px; min-height: 44px; padding: .25rem .75rem; border: 1px solid #40566e; background: #172332; color: #79b8f3; font: inherit; cursor: pointer; }
 .ax3l-live button:disabled { color: #66717e; cursor: default; }
 .ax3l-live button:focus-visible { outline: 2px solid #79b8f3; outline-offset: 3px; }
-.ax3l-live .progress-chart { border: 1px solid #40566e; }
 .ax3l-live .live-status { color: #a7b8cb; }
 </style>
 
@@ -25,7 +25,7 @@ classes: wide
   <p>LLM configured Snake AI</p>
   <p>Updated: <span data-live-updated>—</span></p>
   <p class="live-status" data-live-status role="status">Loading today's games…</p>
-  <p>This site shows the results from the [Ax3l Experiment](https://ax3l.osoyalce.com). The Ax3l experiment consists of a small, local AI (Qwen 3.5 4B) that tunes the performance settings of another, very small AI that is then trained to play the [Snake Game](https://snakelabserver.osoyalce.com). Brought to you by the folks at [Bear & Moose](https://www.osoyalce.com).</p>
+  <p class="intro">This site shows the results from the <a href="https://ax3l.osoyalce.com">Ax3l Experiment</a>. The Ax3l experiment consists of a small, local AI (Qwen 3.5 4B) that tunes the performance settings of another, very small AI that is then trained to play the <a href="https://snakelabserver.osoyalce.com">Snake Game</a>. Brought to you by the folks at <a href="https://www.osoyalce.com">Bear & Moose</a>.</p>
   <img data-live-game alt="Today's highest-scoring captured game" hidden>
   <nav class="game-navigation" aria-label="Today's top five games">
     <button type="button" data-game-step="-1" aria-label="Previous game" disabled>&#8592;</button>
