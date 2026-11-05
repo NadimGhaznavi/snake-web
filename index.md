@@ -10,7 +10,7 @@ classes: wide
 .ax3l-live * { box-sizing: border-box; }
 .ax3l-live h1 { margin: 0; border: 0; font: bold 1.8em/1.3 "Courier New", Courier, monospace; }
 .ax3l-live p { margin: .5rem 0; }
-.ax3l-live .intro { text-align: left; }
+.ax3l-live .para { text-align: left; }
 .ax3l-live [hidden] { display: none !important; }
 .ax3l-live img { display: block; max-width: 100%; height: auto; margin: 1rem auto 0; border: 1px solid #40566e; }
 .ax3l-live .game-navigation { display: flex; justify-content: center; align-items: center; gap: 1rem; margin: .75rem 0 1.5rem; }
@@ -25,15 +25,20 @@ classes: wide
   <p>LLM configured Snake AI</p>
   <p>Updated: <span data-live-updated>—</span></p>
   <p class="live-status" data-live-status role="status">Loading today's games…</p>
-  <p class="intro">This site shows the results from the <a href="https://ax3l.osoyalce.com">Ax3l Experiment</a>. The Ax3l experiment consists of a small, local AI (Qwen 3.5 4B) that tunes the performance settings of another, very small AI that is then trained to play the <a href="https://snakelabserver.osoyalce.com">Snake Game</a>. Brought to you by the folks at <a href="https://www.osoyalce.com">Bear & Moose</a>.</p>
+  <p class="para">This site shows the results from the <a href="https://ax3l.osoyalce.com">Ax3l Experiment</a>. The Ax3l experiment consists of a small, local AI (Qwen 3.5 4B) that tunes the performance settings of another, very small AI that is then trained to play the <a href="https://snakelabserver.osoyalce.com">Snake Game</a>.</p>
+  <p class="para">Brought to you by the folks at <a href="https://www.osoyalce.com">Bear & Moose</a>.</p>
   <img data-live-game alt="Today's highest-scoring captured game" hidden>
   <nav class="game-navigation" aria-label="Today's top five games">
     <button type="button" data-game-step="-1" aria-label="Previous game" disabled>&#8592;</button>
     <span data-game-position aria-live="polite">0 / 0</span>
     <button type="button" data-game-step="1" aria-label="Next game" disabled>&#8594;</button>
   </nav>
+  <p class="para">The top 5 games of the day.</p>
   <img class="progress-chart" data-live-progress width="800" height="438" alt="Animated top ten daily simulation scores, lowest to highest, at observed half-hour updates" hidden>
+  <p class="para">The top 10 games of the day.</p>
   <img data-live-distribution width="800" height="480" alt="Cumulative score distribution every 500 simulations, followed by all simulations" hidden>
+  <p class="para">Score distribution across simulations.</p>
+  <p class="para">This site updates every 30 minutes.</p>
   <noscript>Enable JavaScript to view the live games, daily scores, and score distribution.</noscript>
 </section>
 <script src="{{ '/assets/js/ax3l-live.js' | relative_url }}" defer></script>
