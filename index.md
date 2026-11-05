@@ -25,6 +25,7 @@ classes: wide
   <p>LLM configured Snake AI</p>
   <p>Updated: <span data-live-updated>—</span></p>
   <p class="live-status" data-live-status role="status">Loading today's games…</p>
+  <p>This site shows the results from the [Ax3l Experiment](https://ax3l.osoyalce.com). The Ax3l experiment consists of a small, local AI (Qwen 3.5 4B) that tunes the performance settings of another, very small AI that is then trained to play the [Snake Game](https://snakelabserver.osoyalce.com). Brought to you by the folks at [Bear & Moose](https://www.osoyalce.com).</p>
   <img data-live-game alt="Today's highest-scoring captured game" hidden>
   <nav class="game-navigation" aria-label="Today's top five games">
     <button type="button" data-game-step="-1" aria-label="Previous game" disabled>&#8592;</button>
