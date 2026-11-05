@@ -46,9 +46,9 @@ classes: "wide ax3l-home"
 .ax3l-live .live-status:not(:empty) { margin-bottom: 1rem; }
 .ax3l-live .results-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: start; gap: 1rem; margin-top: 1rem; }
 .ax3l-live .experiment-details { display: grid; gap: 1rem; }
-.ax3l-live .report-links { display: grid; gap: .5rem; margin-top: .75rem; }
+.ax3l-live .experiment-metrics { display: grid; gap: .5rem; margin-top: .75rem; overflow-wrap: anywhere; }
 .ax3l-live .game-panel { margin: 0; }
-.ax3l-live .game-panel figcaption { margin: 0 0 1rem; color: inherit; font-size: inherit; text-align: left; }
+.ax3l-live .game-panel figcaption { margin: 0 0 1rem; color: inherit; font-family: inherit; font-size: inherit; text-align: left; }
 .ax3l-live .game-panel figcaption p { color: var(--live-muted); font-size: .875em; }
 .ax3l-live img { display: block; width: 100%; max-width: 100%; height: auto; margin: 0; border: 1px solid var(--live-border); }
 .ax3l-live .game-navigation { display: flex; justify-content: center; align-items: center; gap: 1rem; margin-top: .75rem; }
@@ -96,13 +96,17 @@ classes: "wide ax3l-home"
           <p>This site shows the results from the <a href="https://ax3l.osoyalce.com">Ax3l Experiment</a>. The Ax3l experiment consists of a small, local AI (Qwen 3.5 4B) that tunes the performance settings of another, very small AI that is then trained to play the <a href="https://snakelabserver.osoyalce.com">Snake Game</a>.</p>
           <p>Brought to you by the folks at <a href="https://www.osoyalce.com">Bear & Moose</a>.</p>
         </section>
-        <section class="panel" aria-labelledby="reports-title">
-          <h3 id="reports-title">Reports</h3>
-          <nav class="report-links" aria-label="Experiment reports">
-            <a href="#daily-highscores">Daily highscores</a>
-            <a href="#score-distribution">Score distribution</a>
-            <a href="https://snakelabserver.osoyalce.com">Open the display server</a>
-          </nav>
+        <section class="panel" aria-labelledby="status-title">
+          <h3 id="status-title">Status</h3>
+          <div class="experiment-metrics">
+            <span>Hostname: <span data-experiment-status="hostname">—</span></span>
+            <span>All-Time Highscore: <span data-experiment-status="all_time_high_score">—</span></span>
+            <span>Current Highscore: <span data-experiment-status="current_high_score">—</span></span>
+            <span>Completed Experiments: <span data-experiment-status="completed_experiments">—</span></span>
+            <span>Simulations Submitted: <span data-experiment-status="simulations_submitted">—</span></span>
+            <span>Games Played: <span data-experiment-status="games_played">—</span></span>
+            <span>Moves Made: <span data-experiment-status="moves_made">—</span></span>
+          </div>
         </section>
       </div>
       <figure class="game-panel panel">
@@ -134,7 +138,7 @@ classes: "wide ax3l-home"
     </section>
   </div>
   <footer class="live-footer">This site updates every 30 minutes. Reload to see the latest publication.</footer>
-  <noscript><p>Enable JavaScript to view the live games, daily scores, and score distribution.</p></noscript>
+  <noscript><p>Enable JavaScript to view the experiment status, live games, daily scores, and score distribution.</p></noscript>
 </section>
 <script src="{{ '/assets/js/ax3l-live.js' | relative_url }}" defer></script>
 

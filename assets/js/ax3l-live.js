@@ -18,6 +18,18 @@
     return origin + filename + '?t=' + Date.now() + '-' + (++request);
   }
 
+  function showExperimentStatus(metadata) {
+    root.querySelectorAll('[data-experiment-status]').forEach(field => {
+      const key = field.dataset.experimentStatus;
+      const value = metadata?.[key];
+      if (key === 'hostname') {
+        field.textContent = typeof value === 'string' && value.trim() ? value : '—';
+      } else {
+        field.textContent = Number.isSafeInteger(value) && value >= 0 ? value.toLocaleString('en-US') : '—';
+      }
+    });
+  }
+
   function showGame() {
     game.hidden = games.length === 0;
     if (games.length) {
@@ -55,6 +67,7 @@
       }
       games = data.games;
       root.querySelector('[data-live-updated]').textContent = data.updated;
+      showExperimentStatus(data.status);
       showGame();
       if (data.daily_progress === true) {
         progress.src = imageURL('daily-progress.gif');
@@ -63,7 +76,7 @@
       histogram.src = imageURL('score-distribution.gif');
       histogram.hidden = false;
     } catch (error) {
-      status.textContent = 'Live images are temporarily unavailable. Reload to retry.';
+      status.textContent = 'Live data is temporarily unavailable. Reload to retry.';
     }
   }
   load();
